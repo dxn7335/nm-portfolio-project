@@ -1,0 +1,160 @@
+.body-main-header {
+  position: absolute;
+  margin:auto;
+  display: block;
+  padding-top: 35px;
+  padding-bottom: 15px;
+  max-width: 90%;
+  width: 100%;
+  height: auto;
+  z-index: 5;
+  font-size: 115%;
+  transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out; }
+  .body-main-header .nav-links {
+    display: inline-block;
+    float: right;
+    margin: 0;
+    padding-left: 0; }
+    .body-main-header .nav-links li {
+      display: inline-block;
+      margin-right: 25px; }
+    .body-main-header .nav-links li > a {
+      text-decoration: none;
+      color: #FFF;
+      font-weight: 300;
+      transition: border-bottom .15s ease-in-out;
+      -moz-transition: border-bottom .15s ease-in-out;
+      -webkit-transition: border-bottom .15s ease-in-out; }
+    .body-main-header .nav-links li > a:hover {
+      border-bottom: 3px solid;
+      opacity: 0.8; }
+    .body-main-header .nav-links li > a:active, .body-main-header .nav-links li .active {
+      color: #ea103e; }
+
+.body-main-header.scrolled {
+  padding-top: 30px;
+  font-size: 95%;
+  background: #fff; }
+  .body-main-header.scrolled li > a {
+    color: #3199c5; }
+  .body-main-header.scrolled .menu-btn {
+    color: #333; }
+  .body-main-header.scrolled .mobile-header-container .nav-links {
+    font-size: 120%; }
+
+.header-container, .mobile-header-container {
+  display: block;
+  padding: 0 2%; }
+
+.mobile-header-container .menu-btn {
+  float: right;
+  margin-right: 2%;
+  font-size: 150%;
+  text-decoration: none;
+  color: #FFF;
+  transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out; }
+.mobile-header-container .menu-btn.clicked {
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg); }
+.mobile-header-container .nav-links {
+  display: none;
+  width: 100%;
+  margin: 0;
+  padding-bottom: 3%;
+  transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -webkit-animation: fadein .3s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein .3s;
+  /* Firefox < 16 */
+  -ms-animation: fadein .3s;
+  /* Internet Explorer */
+  -o-animation: fadein .3s;
+  /* Opera < 12.1 */ }
+  .mobile-header-container .nav-links li {
+    display: block;
+    list-style: none;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 15px; }
+  .mobile-header-container .nav-links li > a:hover {
+    opacity: 0.8; }
+  .mobile-header-container .nav-links li > a:active, .mobile-header-container .nav-links li .active {
+    color: #333; }
+.mobile-header-container .nav-links.closed {
+  -webkit-animation: close .3s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: close .3s;
+  /* Firefox < 16 */
+  -ms-animation: close .3s;
+  /* Internet Explorer */
+  -o-animation: close .3s; }
+
+.nav-logo {
+  display: inline-block;
+  font-size: 130%;
+  color: #FFFFFF;
+  background: #3199c5;
+  transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out; }
+
+.nav-logo:hover, nav-logo:active {
+  color: #3199c5;
+  background: #FFF; }
+
+#special {
+  padding: 13px;
+  margin-top: -16px;
+  font-weight: 300;
+  text-decoration: none; }
+
+/*Close Animation */
+@-webkit-keyframes close {
+  from {
+    opacity: 1;
+    margin-top: 0; }
+  to {
+    opacity: 0;
+    margin-top: -30%; } }
+/* Internet Explorer */
+@-ms-keyframes close {
+  from {
+    opacity: 1;
+    margin-top: 0; }
+  to {
+    opacity: 0;
+    margin-top: -30%; } }
+@keyframes close {
+  from {
+    opacity: 1;
+    margin-top: 0; }
+  to {
+    opacity: 0;
+    margin-top: -30%; } }
+/* Firefox < 16 */
+@-moz-keyframes close {
+  from {
+    opacity: 1;
+    margin-top: 0; }
+  to {
+    opacity: 0;
+    margin-top: -30%; } }
+@media only screen and (max-width: 1024px) {
+  .body-main-header .header-container {
+    display: none; }
+
+  .body-main-header .mobile-header-container {
+    display: block; } }
+@media only screen and (min-width: 1025px) {
+  .body-main-header .mobile-header-container {
+    display: none; }
+
+  .body-main-header .header-container {
+    display: block; } }
