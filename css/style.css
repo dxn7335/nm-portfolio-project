@@ -1,6 +1,6 @@
 @import url(header.css);
 body{
-	font-family: 'Lato';
+	font-family: 'Roboto';
 }
 .body-wrap {
 	height: 100%;
@@ -9,7 +9,7 @@ body{
 
 .overlay {
 	background: #000;
-	opacity: 0.4;
+	opacity: 0.75;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -37,7 +37,8 @@ body{
 }
 
 #banner {
-	height:99%;
+	height:100%;
+	background: rgb(42, 101, 152);
 }
 
 #bannertext{
@@ -45,11 +46,11 @@ body{
     position: absolute;
     text-align: center;
     left: 50%;
-    top: 45%;
-    transform: translate(-50%, -45%);
-    -webkit-transform: translate(-50%, -45%);
-    -moz-transform: translate(-50%, -45%);
-    -o-transform: translate(-50%, -45%);
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
     min-width: 280px;
     width: 50%;
 }
@@ -60,15 +61,23 @@ body{
 	font-size: 300%
 }
 
+#banner .btn{
+	color:#fff;
+	border: 1px solid;
+	padding:2% 7%;
+}
+#banner .btn:hover, #banner .btn:active{
+	background:#fff;
+	border: 1px solid #fff;
+	color:#333;
+}
 
 
 #about{
 	/*background-color: #3199c5;*/
 	background-color: #fff;
 	/*margin-top: -20px;*/
-	padding-top:4%;
 	color:#fff;
-	width:90%;
 }
 
 #about h3{
@@ -80,58 +89,103 @@ body{
 	font-size: 140%;
 }
 
-#contact{
-	background-color: #fff;
-	padding:4% 0%;
+.border{
+	width: 20%;
+	display: block;
+	margin: auto;
+	padding:.5px;
+	background:#888;
+	content:"&nbsp;";
 }
 
-#contact .row{
+#skills{
+	background-color: #F5F5F5;
+	background-color: #fff;
+	padding: 7% 5% 9% 5%;
+}
+#skills .row{
 	width:80%;
 }
-
-#contact h4{
+#skills h4{
 	font-size: 10pt;
 	margin:0;
 }
+#skills .btn, #description .btn{
+	color: #333;
+	border: 1px solid;
+	padding: .5% 1%;
+	text-align: center;
+	margin: auto;
+	margin-top: 3.5%;
+	font-weight: 300;
+	font-size: 60%;
+	display: block;
+	width: 10%;
+	min-width: 125px;
+}
+#skills .btn:hover, #skills .btn:active,
+#description .btn:hover, #description .btn:active{
+	background:#222;
+	border: 1px solid #222;
+	color:#fff;
+}
 
-#description h4{
+#description {
 	font-size: 160%;
-	padding: 10% 3% 15% 3%;
+	padding: 7% 3% 7% 3%;
 	display: block;
 	margin: auto;
 	text-align: center;
-	width: 75%;
 	min-width: 300px;
 	font-family: 'open sans';
 	font-weight: 600;
 	color: #515151;
+	background: #fff;
+	background-color: #F5F5F5;
+}
+#description h4{
+	font-weight: 400;
+}
+#description .row{
+	width:75%;
+}
+#description p{
+	font-weight: 300;
+	color: #939393;
+	width: 90%;
+	padding: 2% 1% 0% 1%;
+	display: block;
+	margin: auto;
+	min-width: 280px;
 }
 
-#slinks h3{
+#contact{
+	/*background-color: #3199c5;
+	background-color: #eee; */
+	color:#222;
+	padding-top: 2%;
+	padding:4% 0%;
+}
+#contact h3{
 	position: relative;
 	text-align: center;
-	font-size: 120%;
-	font-weight:300;
+	font-size: 130%;
+	margin-bottom: 2%;
 }
 
-#slinks p{
+#contact p{
 	text-align:center;
 	position:relative;
-	font-size: 10pt;
+	font-weight:300;
+	font-size: 100%;
+	color: #939393;
 }
 
-#slinks{
-	background-color: #3199c5;
-	background-color: #eee;
-	color:#222;
-	padding: 3% 0%;
-}
-
-#slinks .row{
+#contact .row{
 
 }
 
-#slinks i{
+#contact i{
 	font-size: 150%;
 	color:#222;
 	margin: 1% 0.5%;
@@ -140,8 +194,18 @@ body{
 	-webkit-transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease;
 }
-#slinks i:hover, #slinks i:active{
+#contact i:hover, #contact i:active{
 	color: #3199c5;
+}
+
+footer{
+	color:#888;
+	padding: 1% 0%;
+}
+footer span{
+	text-align: center;
+	display: block;
+	font-weight: 300;
 }
 
 .container{
@@ -157,13 +221,3 @@ body{
 	margin-right: auto;
 }
 
-#banner .btn{
-	color:#fff;
-	border: 1px solid;
-	padding:2% 7%;
-}
-#banner .btn:hover, #banner .btn:active{
-	background:#fff;
-	border: 1px solid #fff;
-	color:#333;
-}
