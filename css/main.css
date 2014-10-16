@@ -176,6 +176,7 @@ body{
 }
 
 #description {
+    position: relative;
 	font-size: 160%;
 	padding: 9% 3% 9% 3%;
 	display: block;
@@ -186,7 +187,7 @@ body{
 	font-weight: 600;
 	color: #fff;
 	background-color: #eee;
-	background: url("../assets/img/dawg.jpg") center no-repeat fixed;
+	background: url("../assets/img/dawg.jpg") no-repeat;
 	background-size: cover;
 }
 #description h4{
