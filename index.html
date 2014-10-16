@@ -4,23 +4,35 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test Portfolio</title>
+    <!--CSS, Fonts-->
     <link rel="stylesheet" href="css/foundation.css" /> 
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" />
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/nprogress.css" />
+    <!--SCRIPTS-->
+    <script type="text/javascript" src="js/vendor/jquery.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone.js"></script>
+    <script type="text/javascript" src="js/router/Backbone.View.js"></script>
+    <script type="text/javascript" src="js/router/ContentView.js"></script>
+    <script type="text/javascript" src="js/router/TemplatedView.js"></script>
+    <script type="text/javascript" src="js/router/ApplicationRouter.js"></script>
+    <script type="text/javascript" src="js/router/routeConfig.js"></script>
+    <script type="text/javascript" src="js/plugins/nprogress/nprogress.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
   </head>
   <body>
     <!-- HEADER -->
     <header class='body-main-header'>
       <div class='header-container'>
-        <a class='nav-logo' id='special' href='#landing'>DN</a>
+        <a class='nav-logo' id='special' href=''>DN</a>
         <ul class='nav-links'>
-          <li><a href='#work'>WORK</a></li>
-          <li><a href='#about'>ABOUT</a></li>
-          <li><a href='mailto:dxn7335@rit.edu'>CONTACT</a></li>
-          <li><a href='assets/files/DannyNguyen_Resume.pdf' target="_blank">RESUME</a></li>
+          <li><a href='#work'>Work</a></li>
+          <li><a href='#about'>About</a></li>
+          <li><a href='#work/tiempo'>Contact</a></li>
+          <li><a href='assets/files/DannyNguyen_Resume.pdf' target="_blank">Resume</a></li>
         </ul>
       </div>
       <!--mobile header-->
@@ -35,61 +47,25 @@
         </ul>
       </div>
     </header>
-
     <!--BODY WRAPPER-->
     <div class="body-wrap">
-    <!--banner-->
-       <div class="container" id="banner">
-        <!--<div id="yourimage"></div>
-        <div class="overlay"></div> -->
-          <div id="bannertext"><h3>Interaction &amp; UI/UX Designer</h3>
-          <a class="btn" href="#">View Work</a></div>  
-       </div>
-    <!--About-->
-       <div class="content-wrap" id="about">
-          <!--Skills-->
-          <div class="container" id="skills">
-            <div class="row">
-              <div class="small-12 large-12 columns">
-                <h3>WHAT I CAN DO</h3>
-              </div>
-            </div>
-            <div class="row">
-              <div class="small-3 large-3 columns text-center"><img src="img/ui-ux.png" /><h4>UI/UX Design</h4></div>
-              <div class="small-3 large-3 columns text-center"><img src="img/ui-ux.png" /><h4>Web Design</h4></div>
-              <div class="small-3 large-3 columns text-center"><img src="img/ui-ux.png" /><h4>Web Development</h4></div>
-              <div class="small-3 large-3 columns text-center"><img src="img/ui-ux.png" /><h4>Mobile Development</h4></div>
-            </div>
-          </div>
-          <!--Description-->
-          <div class="container" id="description">
-            <div class="row">
-              <div class="small-12 large-12 columns text-center">
-                <h4> Intuitive user experiences, and exciting projects are what I crave for.</h4>  
-                <p>Fo shizzle ipsizzle dolizzle sit amet, consectetuer adipiscing elit. Dope the bizzle velizzle, gangsta volutpat, suscipit quizzle, gravida vizzle, arcu. Pellentesque eget tortor. Sed for sure. Da bomb fo shizzle mah nizzle fo rizzle, mah home g-dizzle dolor dapibizzle turpizzle for sure ma nizzle. Maurizzle boom shackalack nibh et </p>      
-              </div>
-            </div>
-            <a class="btn" href="#">Learn More</a></div> 
-          </div>
-          <!--Contact Footer-->
-          <div class="container" id="contact">
-            <h3>Let's Get in Touch!</h3>
-            <p> Feel free to email me at <a href='mailto:eds8004@rit.edu' class='email'>eds8004@rit.edu</a> or find me at one of the links below!</p>
-            <div class="row">
-              <div class="small-12 large-12 columns text-center">
-                <i class="fa fa-linkedin-square"></i>
-                <i class="fa fa-facebook-square"></i>
-                <i class="fa fa-twitter-square"></i>
-                <i class="fa fa-instagram"></i>
-              </div>
-            </div>
-          </div>
-          <div class='border'></div>
-          <footer>
-            <span>&copy; Snoop Dogg | 2014 </span>
-          </footer>
-      </div>
+      <!--End content-->
     </div>
-
+    <!--Loading screen-->
+    <div class='loading-screen'>
+        <h2>DN</h2>  
+    </div>
   </body>
+  <script id="404" type="text/html">
+    <div id="404" class="content">
+    <div class="page-header">
+        <h1>404</h1>
+    </div>
+    <div class="row">
+        <div class="span14">
+            <p>This is not the content you are looking for.</p>
+        </div>
+    </div>
+    </div>
+  </script>
 </html>

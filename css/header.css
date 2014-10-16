@@ -1,10 +1,12 @@
 .body-main-header {
-  position: absolute;
+  position: fixed;
   margin:auto;
   display: block;
   padding-top: 25px;
   padding-bottom: 10px;
-  width: 90%;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 100%;
   height: auto;
   z-index: 5;
   font-size: 95%;
@@ -33,15 +35,19 @@
       color: #ea103e; }
 
 .body-main-header.scrolled {
-  padding-top: 30px;
-  font-size: 95%;
-  background: #fff; }
+  padding-top: 21px;
+  background: #fff;
+  border-bottom: 1px solid #eee; }
   .body-main-header.scrolled li > a {
-    color: #3199c5; }
+    color: #888; 
+    font-size: 95%;}
   .body-main-header.scrolled .menu-btn {
-    color: #333; }
+    color: #888; }
   .body-main-header.scrolled .mobile-header-container .nav-links {
-    font-size: 120%; }
+    font-size: 90%; }
+  .body-main-header.scrolled .nav-logo {
+    font-size: 95%; 
+    color: #3199c5;}
 
 .header-container, .mobile-header-container {
   display: block;
@@ -108,7 +114,7 @@
   background: #FFF; }
 
 #special {
-  padding: 13px;
+  padding: 8px;
   margin-top: -16px;
   font-weight: 600;
   text-decoration: none; 
