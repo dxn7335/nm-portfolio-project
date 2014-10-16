@@ -54,7 +54,7 @@ var ApplicationRouter = Backbone.Router.extend({
             console.log(id);
             
             $.ajax({
-                url:'../template/' + id + '.html',
+                url:'template/' + id + '.html',
                 dataType: 'text',
                 cache: true,
                 success: function(data){
