@@ -63,6 +63,9 @@ body{
 	width: 100%;
 	height: 100%;
 	z-index: 0;
+    transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -webkit-transition: all .6s ease-in-out;
 }
 .content-wrap{
 	margin:auto;
@@ -174,7 +177,7 @@ body{
 #skills .btn:hover, #skills .btn:active,
 #description .btn:hover, #description .btn:active{
 	color:#222;
-	border: 1px solid #222;
+	border: 1px solid #222 #fff;
 	background:#fff;
 }
 
@@ -188,13 +191,24 @@ body{
 	min-width: 300px;
 	font-family: 'open sans';
 	font-weight: 600;
-	color: #fff;
-	background-color: #eee;
+	color: #333;
+    background-color: #eee;
+    transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -webkit-transition: all .6s ease-in-out;
+}
+#description:hover{
+    color: #fff;
 	background: url("../assets/img/dawg.jpg") center no-repeat;
 	background-size: cover;
 }
+#description:hover .overlay{
+    opacity:.75;
+}
+#description:hover h4{
+    color: #fff
+}
 #description h4{
-	color: #fff;
 	font-weight: 400;
 }
 #description .row{
@@ -203,7 +217,6 @@ body{
 }
 #description p{
 	font-weight: 300;
-	color: #fff;
 	width: 90%;
 	padding: 2% 1% 0% 1%;
 	display: block;
@@ -211,11 +224,12 @@ body{
 	min-width: 280px;
 }
 #description .border{
-	background: #fff;
 }
 #description .overlay{
-	background: #5A5A5A;
+	background: #111;
+    opacity:0;
 }
+
 
 #contact{
 	/*background-color: #3199c5;
