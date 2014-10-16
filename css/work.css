@@ -1,0 +1,20 @@
+#work #banner{
+    height: 50%;
+}
+
+#work #bannertext{
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -60%);
+    -webkit-transform: translate(-50%, -60%);
+    -moz-transform: translate(-50%, -60%);
+    -o-transform: translate(-50%, -60%);
+}
+
+#work #bannertext h3{
+    font-weight:600;
+}
+
+#work #gallery{
+    padding: 9% 3%;
+}
