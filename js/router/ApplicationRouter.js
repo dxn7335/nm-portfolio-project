@@ -52,6 +52,7 @@ var ApplicationRouter = Backbone.Router.extend({
             // Fuck this. no like seriously, fuck this
             var router = this;
             console.log(id);
+            
             $.ajax({
                 url:'../../template/' + id + '.html',
                 dataType: 'text',
@@ -63,15 +64,16 @@ var ApplicationRouter = Backbone.Router.extend({
                     NProgress.done();
                 },
                 error: function(){ // [TODO] eeewwww this code is not DRY
-                    $('.loading-screen').fadeOut(400);
-                    NProgress.done();
                     router.addedView = new ContentView({template:"#404"});
                     router.switchView(router.addedView);
+                    $('.loading-screen').fadeOut(400);
+                    NProgress.done();
                 },
                 progress: function(){
                     NProgress.inc();
-                }
+                },
             });
+            
         }
 	},
     
