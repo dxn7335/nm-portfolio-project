@@ -4,11 +4,11 @@
 
 #work #bannertext{
     left: 50%;
-    top: 60%;
-    transform: translate(-50%, -60%);
-    -webkit-transform: translate(-50%, -60%);
-    -moz-transform: translate(-50%, -60%);
-    -o-transform: translate(-50%, -60%);
+    top: 70%;
+    transform: translate(-50%, -70%);
+    -webkit-transform: translate(-50%, -70%);
+    -moz-transform: translate(-50%, -70%);
+    -o-transform: translate(-50%, -70%);
 }
 
 #work #bannertext h3{
