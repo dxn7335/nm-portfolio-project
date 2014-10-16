@@ -31,7 +31,7 @@ var portfolio_app = function(mode){
 	/---------------------------------------------------------------------*/
 	function initRouter (){
 		var router = new ApplicationRouter($('.body-wrap'), routeConfig);
-		Backbone.history.start();
+		Backbone.history.start({root:'/'});
 	}
 
 	/*----------------------------------------------------------------------

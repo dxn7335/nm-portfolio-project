@@ -36,6 +36,7 @@ var ApplicationRouter = Backbone.Router.extend({
 		view.render();
 		this.currentView = view;
         this.currentView.transitionIn();
+        
 	},
     
 	/*
@@ -45,13 +46,13 @@ var ApplicationRouter = Backbone.Router.extend({
         if(!id) {
             id = 'home';
         }
+        console.log(id);
         if(id.indexOf("work/") == -1 ){
             //$('.loading-screen').fadeIn(400);
             NProgress.start();
             // Make a reference to router itself
             // Fuck this. no like seriously, fuck this
             var router = this;
-            console.log(id);
             
             $.ajax({
                 url:'template/' + id + '.html',
@@ -74,13 +75,12 @@ var ApplicationRouter = Backbone.Router.extend({
                     NProgress.inc();
                 },
             });
-            
         }
 	},
     
     noHandle: function(id){
         //individual case study will come in
-        return id;
+        console.log(id);
     },
     
 	setActiveEntry: function(url) {
