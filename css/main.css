@@ -186,7 +186,7 @@ body{
 	font-weight: 600;
 	color: #fff;
 	background-color: #eee;
-	background: url("https://c4.staticflickr.com/4/3629/3655887487_d29e027a2a_b.jpg") center no-repeat fixed;
+	background: url("../assets/img/dawg.jpg") center no-repeat fixed;
 	background-size: cover;
 }
 #description h4{
