@@ -22,7 +22,7 @@ Backbone.View = Backbone.View.extend({
           });
         };
 
-        _.delay(animateIn, 20);
+        _.delay(animateIn, 200);
 
     },
     
