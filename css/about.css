@@ -1,0 +1,130 @@
+#about{
+	/*background-color: #3199c5;*/
+	background-color: #fff;
+	/*margin-top: -20px;*/
+	color:#fff;
+}
+
+#about #banner{
+    height: 45%;
+}
+
+#about #bannertext{
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -70%);
+    -webkit-transform: translate(-50%, -70%);
+    -moz-transform: translate(-50%, -70%);
+    -o-transform: translate(-50%, -70%);
+}
+#about #bannertext h3{
+    color: #fff;
+    margin-bottom: 7%;
+    font-size: 210%;
+    font-weight:600;
+}
+
+#about .container h4{
+	position: relative;
+	text-align: center;
+	padding-bottom: .25%;
+	font-family: 'open sans';
+	font-weight: 600;
+}
+
+.border{
+	width: 3%;
+	display: block;
+	margin: auto;
+	margin-bottom:2%;
+	padding: 1px;
+	background: #555;
+	content: "&nbsp;";
+	min-width: 40px;
+}
+
+#skills{
+	background-color: #F5F5F5;
+	background-color: #fff;
+	padding: 4% 5% 8% 5%;
+}
+#skills .row{
+	width:80%;
+}
+#skills span{
+	font-size: 10pt;
+    margin: 0;
+    color: #939393;
+    display: block;
+}
+#skills .btn, #description .btn{
+	color: #fff;
+	border: 1px solid;
+	padding: .5% 1%;
+	text-align: center;
+	margin: auto;
+	margin-top: 3.5%;
+	font-weight: 300;
+	font-size: 60%;
+	display: block;
+	width: 10%;
+	min-width: 125px;
+	z-index:1;
+	position: relative;
+}
+#skills .btn:hover, #skills .btn:active,
+#description .btn:hover, #description .btn:active{
+	color:#222;
+	border: 1px solid #222 #fff;
+	background:#fff;
+}
+
+#description {
+    position: relative;
+	font-size: 160%;
+	padding: 9% 3% 9% 3%;
+	display: block;
+	margin: auto;
+	text-align: center;
+	min-width: 300px;
+	font-family: 'open sans';
+	font-weight: 600;
+	color: #333;
+    background-color: #f5f5f5;
+    transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -webkit-transition: all .6s ease-in-out;
+}
+#description:hover{
+    color: #fff;
+	background: url("../assets/img/dawg.jpg") center no-repeat;
+	background-size: cover;
+}
+#description:hover .overlay{
+    opacity:.75;
+}
+#description h4{
+    font-size: 100%;
+    font-weight: 400;
+}
+#description:hover h4{
+    color: #fff
+}
+#description .row{
+	width:75%;
+	z-index:1;
+}
+#description p{
+	font-weight: 300;
+	width: 90%;
+	padding: 2% 1% 0% 1%;
+	display: block;
+	margin: auto;
+	min-width: 280px;
+}
+#description .border{
+}
+#description .overlay{
+	background: #111;
+    opacity:0;
+}

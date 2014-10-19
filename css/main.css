@@ -1,5 +1,7 @@
 @import url(header.css);
 @import url(work.css);
+@import url(about.css);
+@import url(contact.css);
 
 body{
 	font-family: 'Roboto';
@@ -120,159 +122,71 @@ body{
 }
 
 
-#about{
-	/*background-color: #3199c5;*/
-	background-color: #fff;
-	/*margin-top: -20px;*/
-	color:#fff;
-}
 
-#about h3{
-	position: relative;
-	text-align: center;
-	padding-bottom: .25%;
-	font-family: 'open sans';
-	font-weight: 600;
-	font-size: 140%;
+/*Work Previews - at end of about and contact pages*/
+#workprev{
+    display:block;
+    position:relative;
+    padding: 6% 5%;
+    min-height:150px;
+    background: rgb(56, 137, 207);
+    /*will be replaced with background image?*/
+    color:#fff;
+    cursor:pointer;
+    transition: all 0.45s ease;
+    -moz-transition: all 0.45s ease;
+    -webkit-transition: all 0.45s ease-in-out;
+    -o-transition: all 0.45s ease-in-out;
 }
-
-.border{
-	width: 3%;
-	display: block;
-	margin: auto;
-	margin-bottom:2%;
-	padding: 1px;
-	background: #555;
-	content: "&nbsp;";
-	min-width: 40px;
+#workprev:hover{
+    background: -webkit-linear-gradient(90deg, #4C9BC4 10%, #21ECB9 90%);
+    background: -moz-linear-gradient(90deg, #4C9BC4 10%, #21ECB9 90%);
+    background: -o-linear-gradient(90deg, #4C9BC4 10%, #21ECB9 90%);
+    background: linear-gradient(90deg, #4C9BC4 10%, #21ECB9 90%);
+    background: #13B88F;
+    opacity:1;
 }
-
-#skills{
-	background-color: #F5F5F5;
-	background-color: #fff;
-	padding: 8% 5% 13% 5%;
-}
-#skills .row{
-	width:80%;
-}
-#skills h4{
-	font-size: 10pt;
-	margin:0;
-}
-#skills .btn, #description .btn{
-	color: #fff;
-	border: 1px solid;
-	padding: .5% 1%;
-	text-align: center;
-	margin: auto;
-	margin-top: 3.5%;
-	font-weight: 300;
-	font-size: 60%;
-	display: block;
-	width: 10%;
-	min-width: 125px;
-	z-index:1;
-	position: relative;
-}
-#skills .btn:hover, #skills .btn:active,
-#description .btn:hover, #description .btn:active{
-	color:#222;
-	border: 1px solid #222 #fff;
-	background:#fff;
-}
-
-#description {
-    position: relative;
-	font-size: 160%;
-	padding: 9% 3% 9% 3%;
-	display: block;
-	margin: auto;
-	text-align: center;
-	min-width: 300px;
-	font-family: 'open sans';
-	font-weight: 600;
-	color: #333;
-    background-color: #eee;
-    transition: all 0.6s ease;
-    -moz-transition: all 0.6s ease;
-    -webkit-transition: all .6s ease-in-out;
-}
-#description:hover{
+#workprev .header{
     color: #fff;
-	background: url("../assets/img/dawg.jpg") center no-repeat;
-	background-size: cover;
+    font-size: 90%;
+    font-weight: 400;
+    display: block;
+    text-align: center;
 }
-#description:hover .overlay{
-    opacity:.75;
+#workprev .work-title{
+    color: #fff;
+    font-size: 180%;
+    font-weight: 500;
+    display:block;
+    text-align: center;
+    margin-top:3%;
+    margin-bottom:2%;
+    transition: all 0.45s ease;
+    -moz-transition: all 0.45s ease;
+    -webkit-transition: all 0.45s ease-in-out;
+    -o-transition: all 0.45s ease-in-out;
 }
-#description:hover h4{
-    color: #fff
+#workprev .work-desc{
+    color: #fff;
+    opacity: 0.8;
+    margin: auto;
+    margin-top:2%;
+    margin-bottom: 4%;
+    display: block;
+    text-align: center;
+    min-width: 300px;
+    max-width:500px;
+    font-weight: 300;
+    font-size:110%;
 }
-#description h4{
-	font-weight: 400;
-}
-#description .row{
-	width:75%;
-	z-index:1;
-}
-#description p{
-	font-weight: 300;
-	width: 90%;
-	padding: 2% 1% 0% 1%;
-	display: block;
-	margin: auto;
-	min-width: 280px;
-}
-#description .border{
-}
-#description .overlay{
-	background: #111;
-    opacity:0;
-}
-
-
-#contact{
-	/*background-color: #3199c5;
-	background-color: #eee; */
-	color:#222;
-	padding-top: 2%;
-	padding:4% 0%;
-}
-#contact h3{
-	position: relative;
-	text-align: center;
-	font-size: 130%;
-	margin-bottom: 2%;
-}
-
-#contact p{
-	text-align:center;
-	position:relative;
-	font-weight:300;
-	font-size: 100%;
-	color: #939393;
-}
-
-#contact .row{
-
-}
-
-#contact i{
-	font-size: 150%;
-	color:#222;
-	margin: 1% 0.5%;
-	cursor:pointer;
-	transition: all 0.3s ease;
-	-webkit-transition: all 0.3s ease;
-	-moz-transition: all 0.3s ease;
-}
-#contact i:hover, #contact i:active{
-	color: #3199c5;
+#workprev .border{
+    background:#fff;
 }
 
 footer{
 	color:#888;
 	padding: 1% 0%;
+    border-top:1px solid #eee;
 }
 footer span{
 	text-align: center;
