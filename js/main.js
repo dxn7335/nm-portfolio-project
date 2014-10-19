@@ -31,11 +31,11 @@ var portfolio_app = function(mode){
 	/---------------------------------------------------------------------*/
 	function initRouter (){
 		var router = new ApplicationRouter($('.body-wrap'), routeConfig);
-		Backbone.history.start({});
+		Backbone.history.start();
 	}
 
 	/*----------------------------------------------------------------------
-	// fomartBodyPages: sets basic structure for all body pages
+	// setScrollListeners: scroll event handlers
 	/---------------------------------------------------------------------*/
 	function setScrollListeners(){
 		//when scrolling off about
@@ -65,7 +65,10 @@ var portfolio_app = function(mode){
 		}) */
 
 	}
-
+    
+    /*----------------------------------------------------------------------
+	// setSmoothScrolling: Smooth scrolling for navigational links
+	/---------------------------------------------------------------------*/
 	function setSmoothScrolling() {
 		$('.nav-links li a, .nav-logo, .more-link').click(function() {
 		      var target = $(this.hash);

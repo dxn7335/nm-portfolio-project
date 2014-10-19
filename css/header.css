@@ -33,13 +33,15 @@
       opacity: 0.8; }
     .body-main-header .nav-links li > a:active, .body-main-header .nav-links li .active {
       color: #ea103e; }
+    .body-main-header .nav-links li a.nav-link-active {
+      border-bottom: 3px solid;}
 
 .body-main-header.scrolled {
   padding-top: 21px;
   background: #fff;
   border-bottom: 1px solid #eee; }
   .body-main-header.scrolled li > a {
-    color: #888; 
+    color: #555; 
     font-size: 95%;}
   .body-main-header.scrolled .menu-btn {
     color: #888; }
