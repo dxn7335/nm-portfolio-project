@@ -64,7 +64,7 @@ var ApplicationRouter = Backbone.Router.extend({
             success: function(data){
                 router.addedView = new TemplatedView({template:data, data:{}, routeId:id});
                 router.switchView(router.addedView);
-                //router.setActiveEntry(id);
+                router.setActiveEntry(id);
                 $('.loading-screen').fadeOut(400);
                 NProgress.done();
             },
@@ -88,10 +88,10 @@ var ApplicationRouter = Backbone.Router.extend({
     
 	setActiveEntry: function(url) {
 		// Unmark all entries
-		$('li').removeClass('active');
+        $('.nav-link-active').removeClass('nav-link-active');
 
 		// Mark active entry
-		$("li a[href='#" + url + "']").parents('li').addClass('active');
+		$(".nav-links li a[href='#/" + url + "']").addClass('nav-link-active');
 	},
 
 /*

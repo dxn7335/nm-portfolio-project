@@ -127,7 +127,7 @@ body{
 #workprev{
     display:block;
     position:relative;
-    padding: 6% 5%;
+    padding: 8% 5%;
     min-height:150px;
     background: rgb(56, 137, 207);
     /*will be replaced with background image?*/
