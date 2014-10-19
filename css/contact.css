@@ -1,0 +1,60 @@
+#contact{
+}
+
+#contact #banner{
+    height: 50%;
+}
+#contact #bannertext{
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -70%);
+    -webkit-transform: translate(-50%, -70%);
+    -moz-transform: translate(-50%, -70%);
+    -o-transform: translate(-50%, -70%);
+}
+#contact #bannertext h3{
+    color: #fff;
+    margin-bottom: 7%;
+    font-weight:600;
+    font-size: 210%;
+}
+#contact-info{
+    background:#fff;
+    padding:7% 6%;
+}
+#contact-info h4{
+	position: relative;
+	text-align: center;
+	font-size: 135%;
+    font-weight:500;
+	margin-bottom: 2%;
+    color: #949494;
+}
+#contact-info p{
+	text-align:center;
+	position:relative;
+	font-weight:300;
+	font-size: 120%;
+    margin:auto;
+    width:40%;
+    min-width:300px;
+}
+
+#contact-info .slink{
+	font-size: 140%;
+	padding: 5px 12px;
+    display: inline-block;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+    border: 2px solid;
+    color: #3199c5;
+	margin: 2% 0.5%;
+	cursor:pointer;
+	transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+}
+#contact .slink:hover, #contact .slink:active{
+	color: #222;
+}

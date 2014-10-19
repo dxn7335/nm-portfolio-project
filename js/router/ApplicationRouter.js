@@ -10,7 +10,7 @@ var ApplicationRouter = Backbone.Router.extend({
 	routes: {
 		"": "changeView",
         ":id" : "changeView",
-        "work/:id" : "noHandle",
+        ":type/:id" : "changeView",
 		"*else": "notFound", 
 	},
 	
@@ -42,45 +42,48 @@ var ApplicationRouter = Backbone.Router.extend({
 	/*
 	 * Change the active element in the topbar
 	 */
-	changeView: function(id){
+	changeView: function(id, type){
         if(!id) {
             id = 'home';
         }
-        console.log(id);
-        if(id.indexOf("work/") == -1 ){
-            //$('.loading-screen').fadeIn(400);
-            NProgress.start();
-            // Make a reference to router itself
-            // Fuck this. no like seriously, fuck this
-            var router = this;
-            
-            $.ajax({
-                url:'template/' + id + '.html',
-                dataType: 'text',
-                cache: true,
-                success: function(data){
-                    router.addedView = new TemplatedView({template:data, data:{}, routeId:id});
-                    router.switchView(router.addedView);
-                    //router.setActiveEntry(id);
-                    $('.loading-screen').fadeOut(400);
-                    NProgress.done();
-                },
-                error: function(){ // [TODO] eeewwww this code is not DRY
-                    router.addedView = new ContentView({template:"#404"});
-                    router.switchView(router.addedView);
-                    $('.loading-screen').fadeOut(400);
-                    NProgress.done();
-                },
-                progress: function(){
-                    NProgress.inc();
-                },
-            });
+        //if type is not null
+        if(type){
+            id = type+"/"+id;
         }
+        console.log(id);
+        //$('.loading-screen').fadeIn(400);
+        NProgress.start();
+        // Make a reference to router itself
+        // Fuck this. no like seriously, fuck this
+        var router = this;
+        
+        $.ajax({
+            url:'template/' + id + '.html',
+            dataType: 'text',
+            cache: true,
+            success: function(data){
+                router.addedView = new TemplatedView({template:data, data:{}, routeId:id});
+                router.switchView(router.addedView);
+                //router.setActiveEntry(id);
+                $('.loading-screen').fadeOut(400);
+                NProgress.done();
+            },
+            error: function(){ // [TODO] eeewwww this code is not DRY
+                router.addedView = new ContentView({template:"#404"});
+                router.switchView(router.addedView);
+                $('.loading-screen').fadeOut(400);
+                NProgress.done();
+            },
+            progress: function(){
+                NProgress.inc();
+            },
+        });
+        
 	},
     
-    noHandle: function(id){
+    noHandle: function(type,id){
         //individual case study will come in
-        console.log(id);
+        console.log(type+"/"+id);
     },
     
 	setActiveEntry: function(url) {
