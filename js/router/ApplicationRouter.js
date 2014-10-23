@@ -46,12 +46,13 @@ var ApplicationRouter = Backbone.Router.extend({
         if(!id) {
             id = 'home';
         }
+        if(id == "work" || type == "work"){
+            if(!loadedWorks){ setupWork();}
+        }
         //if type is not null
         if(type){
             id = type+"/"+id;
         }
-        console.log(id);
-        //$('.loading-screen').fadeIn(400);
         NProgress.start();
         // Make a reference to router itself
         // Fuck this. no like seriously, fuck this
@@ -82,7 +83,7 @@ var ApplicationRouter = Backbone.Router.extend({
         
 	},
     
-    noHandle: function(type,id){
+    setupWork: function(type,id){
         //individual case study will come in
         console.log(type+"/"+id);
     },

@@ -113,6 +113,8 @@
 #description .row{
 	width:75%;
 	z-index:1;
+    display:block;
+    margin:auto;
 }
 #description p{
 	font-weight: 300;
@@ -122,9 +124,22 @@
 	margin: auto;
 	min-width: 280px;
 }
+#description:hover p{
+    color:#fff;
+}
 #description .border{
 }
 #description .overlay{
 	background: #111;
     opacity:0;
+}
+
+.row{
+    display:block;
+    margin:auto;
+    text-align: center;
+}
+
+#skills h4{
+    color:rgb(42, 101, 152);
 }

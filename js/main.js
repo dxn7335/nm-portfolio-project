@@ -30,7 +30,7 @@ var portfolio_app = function(mode){
 	// initRouter: instantiates and starts backbone router
 	/---------------------------------------------------------------------*/
 	function initRouter (){
-		var router = new ApplicationRouter($('.body-wrap'), routeConfig);
+		var router = new ApplicationRouter($('#body-content'), routeConfig);
 		Backbone.history.start();
 	}
 
