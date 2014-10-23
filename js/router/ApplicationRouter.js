@@ -67,6 +67,7 @@ var ApplicationRouter = Backbone.Router.extend({
                 router.setActiveEntry(id);
                 $('.loading-screen').fadeOut(400);
                 NProgress.done();
+                $(window).scrollTop(0);
             },
             error: function(){ // [TODO] eeewwww this code is not DRY
                 router.addedView = new ContentView({template:"#404"});
