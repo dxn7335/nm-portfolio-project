@@ -201,10 +201,12 @@ footer span{
 	position:relative;
 	margin-top: 0;
 	margin-bottom: 0;
+    width:auto;
 }
 
 .top-bar{
 	margin-left: auto;
 	margin-right: auto;
 }
+
 
