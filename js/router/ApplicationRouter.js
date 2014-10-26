@@ -106,6 +106,7 @@ var ApplicationRouter = Backbone.Router.extend({
     /* WORK RELATED */
     checkWorkLoaded: function(){
         if(!this.loadedWorks){ this.loadWorkInfo(); }
+        else { this.setWorkPreview(); }
     },
     
     /*----------------------------------------------------------------------
