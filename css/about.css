@@ -6,10 +6,10 @@
 }
 
 #about #banner{
-    height: 45%;
+    height: 50%;
 }
 
-#about #bannertext{
+#about .bannertext{
     left: 50%;
     top: 70%;
     transform: translate(-50%, -70%);
@@ -17,7 +17,7 @@
     -moz-transform: translate(-50%, -70%);
     -o-transform: translate(-50%, -70%);
 }
-#about #bannertext h3{
+#about .bannertext h3{
     color: #fff;
     margin-bottom: 7%;
     font-size: 210%;
@@ -123,6 +123,7 @@
 	display: block;
 	margin: auto;
 	min-width: 280px;
+    font-size:75%;
 }
 #description:hover p{
     color:#fff;

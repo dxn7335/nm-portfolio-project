@@ -25,12 +25,14 @@ var portfolio_app = function(mode){
 		//setSmoothScrolling();
 		setMobileMenuListener();
 	}
-
+    
+    /**********************************************************************/
 	/*----------------------------------------------------------------------
 	// initRouter: instantiates and starts backbone router
 	/---------------------------------------------------------------------*/
+    /**********************************************************************/
 	function initRouter (){
-		var router = new ApplicationRouter($('#body-content'), routeConfig);
+		this.router = new ApplicationRouter($('#body-container'), routeConfig);
 		Backbone.history.start();
 	}
 
@@ -47,22 +49,20 @@ var portfolio_app = function(mode){
 		    else{
 		    	$('.body-main-header').removeClass('scrolled');
 		    }
+
 		})
 
-		/*
-		//when scroll to work section
-		var done = false;
+		
+		//Only show nav bar when scrolling up
+		var lastScroll = 0;
 		$(window).scroll(function(){
-		    if( $(window).scrollTop() >= $('#work').offset().top - 100){
-		    	if(!done){
-			    	//window.location.hash ='work';
-			        $('.work-piece').each(function(i){
-			        	$(this).delay(100*i).fadeIn(180);
-			        })
-			        done = true;
-		    	}
-		    }
-		}) */
+            if( $(window).scrollTop() >= distance+20 ){
+                if($(window).scrollTop() > lastScroll) { $('.body-main-header').addClass('scrolled-down'); }
+                else { $('.body-main-header').removeClass('scrolled-down'); }
+
+                lastScroll = $(window).scrollTop();
+            }
+		}) 
 
 	}
     
@@ -116,6 +116,7 @@ var portfolio_app = function(mode){
 	return{
 		initialize: initialize,
 		initRouter: initRouter,
+        router: portfolio_app.router,
 	}
 
 };

@@ -19,6 +19,7 @@
     <script type="text/javascript" src="js/router/Backbone.View.js"></script>
     <script type="text/javascript" src="js/router/ContentView.js"></script>
     <script type="text/javascript" src="js/router/TemplatedView.js"></script>
+    <script type="text/javascript" src="js/router/WorkPrevView.js"></script>
     <script type="text/javascript" src="js/router/ApplicationRouter.js"></script>
     <script type="text/javascript" src="js/router/routeConfig.js"></script>
     <!--plugins-->
@@ -30,7 +31,8 @@
     <!-- HEADER -->
     <header class='body-main-header'>
       <div class='header-container'>
-        <a class='nav-logo' id='special' href=''>DN</a>
+        <span class='nav-logo'><a id='special' href=''>DN</a></span>
+        <!--<span class='nav-logo'><a href=''><img src='assets/img/logo.png'/></a></span>-->
         <ul class='nav-links'>
           <li><a href='#/work'>Work</a></li>
           <li><a href='#/about'>About</a></li>
@@ -40,7 +42,7 @@
       </div>
       <!--mobile header-->
       <div class='mobile-header-container'>
-        <a class='nav-logo' id='special' href='#landing'>DN</a>
+        <a class='nav-logo' id='special' href='#landing'>D N</a>
         <a class='menu-btn'><i class="fa fa-bars"></i></a>
         <ul class='nav-links'>
           <li><a href='#work'>Work</a></li>
@@ -52,11 +54,8 @@
     </header>
     <!--BODY WRAPPER-->
     <div class="body-wrap">
-      <div id="body-content"></div>
+      <div id="body-container"></div>
       <!--End content-->
-      <footer>
-        <span>&copy; Snoop Dogg | 2014 </span>
-      </footer>
     </div>
     <!--Loading screen-->
     <div class='loading-screen'>
@@ -64,15 +63,15 @@
     </div>
   </body>
   <script id="404" type="text/html">
-    <div id="404" class="content">
-    <div class="page-header">
-        <h1>404</h1>
-    </div>
-    <div class="row">
-        <div>
-            <p>This is not the content you are looking for.</p>
+    <div id="page-404" class="content 404">
+        <div id="pg-404-text">
+            <h1>404</h1>
+            <div class="row">
+                <div>
+                    <p>This is not the content you are looking for.</p>
+                </div>
+            </div>
         </div>
-    </div>
     </div>
   </script>
 </html>

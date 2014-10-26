@@ -2,14 +2,15 @@
   position: fixed;
   margin:auto;
   display: block;
-  padding-top: 25px;
-  padding-bottom: 10px;
+  /*padding-top: 25px;
+  padding-bottom: 10px;*/
   padding-left: 5%;
   padding-right: 5%;
   width: 100%;
   height: auto;
   z-index: 5;
-  font-size: 95%;
+  font-size: 100%;
+  opacity: 1;
   transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   -webkit-transition: all .2s ease-in-out; }
@@ -17,39 +18,50 @@
     display: inline-block;
     float: right;
     margin: 0;
-    padding-left: 0; }
+    padding-left: 0;
+    vertical-align: middle;
+    line-height: 36px;}
     .body-main-header .nav-links li {
       display: inline-block;
-      margin-right: 25px; }
+      margin-right: 0;
+      float: left;
+      padding: 20px 20px 5px 20px;
+      transition: all .2s ease-in-out;
+      -moz-transition: all .2s ease-in-out;
+      -webkit-transition: all .2s ease-in-out; }
     .body-main-header .nav-links li > a {
       text-decoration: none;
       color: #FFF;
-      font-weight: 300;
-      transition: border-bottom .15s ease-in-out;
-      -moz-transition: border-bottom .15s ease-in-out;
-      -webkit-transition: border-bottom .15s ease-in-out; }
-    .body-main-header .nav-links li > a:hover {
-      border-bottom: 3px solid;
-      opacity: 0.8; }
+      font-weight: 300;}
+    .body-main-header .nav-links li:hover {
+      background: rgb(76, 116, 187);
+      color: #fff;}
+    .body-main-header .nav-links li:hover > a {
+      color: #fff;}
     .body-main-header .nav-links li > a:active, .body-main-header .nav-links li .active {
       color: #ea103e; }
-    .body-main-header .nav-links li a.nav-link-active {
-      border-bottom: 3px solid;}
+    .body-main-header .nav-links li.nav-link-active {
+      background: rgb(57, 104, 190);}
+    .body-main-header .nav-links li.nav-link-active a{
+      color: #fff;}
 
 .body-main-header.scrolled {
-  padding-top: 21px;
   background: #fff;
   border-bottom: 1px solid #eee; }
+  .body-main-header.scrolled .nav-links li {
+    padding: 12px 20px;}
   .body-main-header.scrolled li > a {
     color: #555; 
     font-size: 95%;}
   .body-main-header.scrolled .menu-btn {
     color: #888; }
-  .body-main-header.scrolled .mobile-header-container .nav-links {
-    font-size: 90%; }
-  .body-main-header.scrolled .nav-logo {
+  .body-main-header.scrolled .nav-logo a{
     font-size: 95%; 
     color: #3199c5;}
+
+.body-main-header.scrolled-down{
+    opacity:0;
+}
 
 .header-container, .mobile-header-container {
   display: block;
@@ -107,13 +119,21 @@
   display: inline-block;
   font-size: 130%;
   color: #FFFFFF;
+  padding-top: 20px;
+  vertical-align: middle;
+  line-height: 36px;
   transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   -webkit-transition: all .2s ease-in-out; }
-
-.nav-logo:hover, nav-logo:active {
+.nav-logo a{
+  color: #FFFFFF;}
+.nav-logo a:hover, nav-logo:active {
   color: #3199c5;
   background: #FFF; }
+
+.body-main-header.scrolled .nav-logo {
+    padding-top: 12px; }
+
 
 #special {
   padding: 8px;

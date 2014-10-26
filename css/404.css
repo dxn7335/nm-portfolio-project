@@ -1,6 +1,18 @@
-.page-header{
+#page-404{
+    background: #3868B3;
+    color: #fff;
+}
+#pg-404-text{
+    display: block;
+    position: absolute;
     text-align: center;
-    display:block;
-    margin:auto;
-    padding-top: 15%;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -30%);
+    -webkit-transform: translate(-50%, 30%);
+    -moz-transform: translate(-50%, -30%);
+    -o-transform: translate(-50%, -30%);
+    min-width: 280px;
+    padding: 3% 2%;
+    border: 3px solid;
 }
