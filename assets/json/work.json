@@ -1,8 +1,0 @@
-works: {
-    work:{
-        name: "Tiempo",
-        id: "tiempo",
-        img: "",
-        description: "Simplistic Weather App",
-    },
-}

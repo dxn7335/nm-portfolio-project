@@ -2,7 +2,7 @@
     height: 50%;
 }
 
-#work #bannertext{
+#work .bannertext{
     left: 50%;
     top: 70%;
     transform: translate(-50%, -70%);
@@ -11,11 +11,12 @@
     -o-transform: translate(-50%, -70%);
 }
 
-#work #bannertext h3{
+#work .bannertext h3{
     font-weight:600;
     font-size:250%;
 }
 
 #work #gallery{
     padding: 9% 3%;
+    background: #fff;
 }

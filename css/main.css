@@ -2,6 +2,7 @@
 @import url(work.css);
 @import url(about.css);
 @import url(contact.css);
+@import url(404.css);
 
 body{
 	font-family: 'Roboto';
@@ -9,11 +10,16 @@ body{
 .body-wrap, .content{
 	height: 100%;
 	background: #eee;
-	position:absolute;
+	position: absolute;
 	top:0;
 	left:0;
 	width:100%;
 }
+
+#body-container {
+    min-height:100%;
+}
+
 .content{
     opacity:0;
 	transition: all 0.45s ease;
@@ -53,7 +59,7 @@ body{
     font-size:300%;
     font-weight:600;
     padding:2%;
-    border:3px solid;
+    border:4px solid;
 }
 
 .overlay {
@@ -90,7 +96,7 @@ body{
 	background: rgb(42, 101, 152);
 }
 
-#bannertext{
+.bannertext{
 	display: block;
     position: absolute;
     text-align: center;
@@ -104,7 +110,7 @@ body{
     width: 50%;
 }
 
-#bannertext h3{
+.bannertext h3{
 	color:#fff;
 	margin-bottom: 7%;
 	font-size: 300%
