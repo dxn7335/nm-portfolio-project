@@ -32,7 +32,7 @@
     .body-main-header .nav-links li > a {
       text-decoration: none;
       color: #FFF;
-      font-weight: 300;}
+      font-weight: 400;}
     .body-main-header .nav-links li:hover {
       background: rgb(76, 116, 187);
       color: #fff;}
@@ -41,13 +41,16 @@
     .body-main-header .nav-links li > a:active, .body-main-header .nav-links li .active {
       color: #ea103e; }
     .body-main-header .nav-links li.nav-link-active {
-      background: rgb(57, 104, 190);}
+      background: rgb(57, 104, 190);
+      background: #fff}
     .body-main-header .nav-links li.nav-link-active a{
-      color: #fff;}
+      color: #333;
+      font-weight: 600;}
 
 .body-main-header.scrolled {
-  background: #fff;
-  border-bottom: 1px solid #eee; }
+  /*background: #fff;
+  border-bottom: 1px solid #eee; */
+  background: #222;}
   .body-main-header.scrolled .nav-links li {
     padding: 12px 20px;}
   .body-main-header.scrolled li > a {
@@ -57,7 +60,7 @@
     color: #888; }
   .body-main-header.scrolled .nav-logo a{
     font-size: 95%; 
-    color: #3199c5;}
+    /*color: #3199c5;*/}
 
 .body-main-header.scrolled-down{
     opacity:0;

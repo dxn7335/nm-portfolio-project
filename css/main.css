@@ -9,7 +9,6 @@ body{
 }
 .body-wrap, .content{
 	height: 100%;
-	background: #eee;
 	position: absolute;
 	top:0;
 	left:0;
