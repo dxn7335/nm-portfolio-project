@@ -1,5 +1,11 @@
 <script id='work-gallery-item' type='text/template'>
     <div class='gallery-item'>
-        <h3 class='name'><%= name %></h3>
+        <div class='work-pic'>
+            <img class='thumbnail' src='<%= thumbnail %>'></img>    
+        </div>
+        <div class='work-info'>
+            <h3 class='name'><%= name %></h3>
+            <p class='desc'><%= breif %></p>
+        </div>
     </div>
 </script>

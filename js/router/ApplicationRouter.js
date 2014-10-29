@@ -3,7 +3,8 @@ var ApplicationRouter = Backbone.Router.extend({
 	initialize: function(el, pRoutes) {
 		this.el = el;
 	},
-
+    
+    routeId: null,
 	currentView: null,
 	pastView: null,
 	loadedWorks: null,
@@ -11,6 +12,7 @@ var ApplicationRouter = Backbone.Router.extend({
 	routes: {
 		"": "changeView",
         ":id" : "changeView",
+        "work": "setWorkPreview",
         ":type/:id" : "changeWorkView",
 		"*else": "notFound", 
 	},
@@ -37,7 +39,6 @@ var ApplicationRouter = Backbone.Router.extend({
 		view.render();
 		this.currentView = view;
         this.currentView.transitionIn();
-        
 	},
     
 	/*-----------------------------------------------------
@@ -80,10 +81,9 @@ var ApplicationRouter = Backbone.Router.extend({
             dataType: 'text',
             cache: true,
             success: function(data){
-                //if directed to work page, load the works info if haven't
-                if(id == 'work'){        
-                    router.checkWorkLoaded();
-                }
+                //check if work information has been loaded (important for all pages)  
+                router.routeId = id;
+                router.checkWorkLoaded();
                 router.addedView = new TemplatedView({template:data, data:{}, routeId:id});
                 router.switchView(router.addedView);
                 router.setActiveEntry(id);
@@ -103,10 +103,12 @@ var ApplicationRouter = Backbone.Router.extend({
         });
     },
     
-    /* WORK RELATED */
+    /* WORK RELATED ------------------------------------------------------*/
     checkWorkLoaded: function(){
         if(!this.loadedWorks){ this.loadWorkInfo(); }
-        else { this.setWorkPreview(); }
+        else{
+            if(this.routeId == "work") this.setWorkPreviewItems();
+        }
     },
     
     /*----------------------------------------------------------------------
@@ -125,7 +127,9 @@ var ApplicationRouter = Backbone.Router.extend({
             success: function(data){
                 router.loadedWorks = data.works.work;
                 console.log(router.loadedWorks);
-                router.setWorkPreview();
+                //check if on Work Page
+                //if so, will load items on page after work information has loaded
+                if(router.routeId == "work") router.setWorkPreviewItems();
                 NProgress.done();
                 $('.loading-screen').fadeOut(400);
             },
@@ -141,8 +145,7 @@ var ApplicationRouter = Backbone.Router.extend({
     /*----------------------------------------------------------------------
     * setWorkPreview: 
     *---------------------------------------------------------------------*/
-    setWorkPreview: function(){
-        console.log( this.el.find('#work-gallery'));
+    setWorkPreviewItems: function(){
         for(var i=0; i<this.loadedWorks.length; i++){
             var item = new WorkPrevView({template: "#work-gallery-item", data: this.loadedWorks[i], routeId: "work-gallery-item"});
         }

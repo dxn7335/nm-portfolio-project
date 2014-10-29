@@ -6,12 +6,11 @@ var WorkPrevView = Backbone.View.extend({
 	 * Initialize with the template-id
 	 */
 	initialize: function( options ) {
-        console.log(options);
         var model = options.data;
         var url = 'template/'+options.routeId+'.html';
         var view = this;
         $.get( url, function(data){
-           view.template = _.template( $(data).html(), {name: model.name});
+           view.template = _.template( $(data).html(), model);
            view.render(); 
         })
 	},
@@ -27,7 +26,7 @@ var WorkPrevView = Backbone.View.extend({
         console.log($(content).find('.name').html(this.model.name)); */
         console.log(this.template);
         
-        $('#work').find('#work-gallery').append(this.template);
+        $('#work').find('#gallery').append(this.template);
 		return this;
 	}
 

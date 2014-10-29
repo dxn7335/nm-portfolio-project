@@ -17,6 +17,10 @@
 }
 
 #work #gallery{
-    padding: 9% 3%;
+    padding: 8% 0%;
     background: #fff;
+    width: 80%;
+    min-width: 320px;
+    display:block;
+    margin:auto;
 }
