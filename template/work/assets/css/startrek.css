@@ -1,8 +1,10 @@
-#work #banner{
-    height: 50%;
+#banner{
+    background: rgb(54, 70, 84);
+    background: url('http://payload160.cargocollective.com/1/1/51400/5514822/StarTrek_Header01_o.jpg') no-repeat center;
+    background-size: cover;
 }
 
-#work .bannertext{
+.bannertext{
     left: 50%;
     top: 70%;
     transform: translate(-50%, -70%);
@@ -11,16 +13,7 @@
     -o-transform: translate(-50%, -70%);
 }
 
-#work .bannertext h3{
+.bannertext h3{
     font-weight:600;
     font-size:250%;
-}
-
-#work #gallery{
-    padding: 8% 0%;
-    background: #fff;
-    width: 80%;
-    min-width: 320px;
-    display:block;
-    margin:auto;
 }

@@ -2,6 +2,7 @@ var ApplicationRouter = Backbone.Router.extend({
 	
 	initialize: function(el, pRoutes) {
 		this.el = el;
+        this.loadWorkInfo();
 	},
     
     routeId: null,
@@ -32,13 +33,17 @@ var ApplicationRouter = Backbone.Router.extend({
         }
         else{
             //if no previous view existed, totally replace contents in dom
-            this.el.prepend(view.el);
+            this.el.html(view.el);
         }
 
 		// Render view after it is in the DOM (styles are applied)
 		view.render();
+        this.afterViewLoaded();
 		this.currentView = view;
         this.currentView.transitionIn();
+        $(window).scrollTop(0);
+        $('.loading-screen').fadeOut(400);
+        
 	},
     
 	/*-----------------------------------------------------
@@ -57,14 +62,23 @@ var ApplicationRouter = Backbone.Router.extend({
 	 * Change the work related content 
 	 ----------------------------------------------------*/
     changeWorkView: function(type,id){
-        if(!this.loadedWorks){ this.setupWork();}
 
         var pageID = type+"/"+id;
-        console.log(pageID);
         
+        console.log(type);
         this.loadPageContent(pageID);
-        this.setActiveEntry("work");
     },
+    
+    setActiveEntry: function(url) {
+		// Unmark all entries
+        $('.nav-link-active').removeClass('nav-link-active');
+
+		// Mark active entry
+        if( url.indexOf("work") != -1)
+            $(".nav-links li a[href='#/work']").parent().addClass('nav-link-active');
+        else
+		  $(".nav-links li a[href='#/" + url + "']").parent().addClass('nav-link-active');
+	},
     
     
     /*------------------------------------------------------
@@ -72,6 +86,7 @@ var ApplicationRouter = Backbone.Router.extend({
      -----------------------------------------------------*/
     loadPageContent: function(id){
         NProgress.start();
+        $('.loading-screen').fadeIn(200);
         // Make a reference to router itself
         // Fuck this. no like seriously, fuck this
         var router = this;
@@ -83,13 +98,11 @@ var ApplicationRouter = Backbone.Router.extend({
             success: function(data){
                 //check if work information has been loaded (important for all pages)  
                 router.routeId = id;
-                router.checkWorkLoaded();
+                //router.checkWorkLoaded();
                 router.addedView = new TemplatedView({template:data, data:{}, routeId:id});
                 router.switchView(router.addedView);
                 router.setActiveEntry(id);
-                $(window).scrollTop(0);
                 NProgress.done();
-                $('.loading-screen').fadeOut(400);
             },
             error: function(){ // [TODO] eeewwww this code is not DRY
                 router.addedView = new ContentView({template:"#404"});
@@ -103,11 +116,20 @@ var ApplicationRouter = Backbone.Router.extend({
         });
     },
     
+    
     /* WORK RELATED ------------------------------------------------------*/
-    checkWorkLoaded: function(){
+    afterViewLoaded: function(){
         if(!this.loadedWorks){ this.loadWorkInfo(); }
         else{
-            if(this.routeId == "work") this.setWorkPreviewItems();
+            if(this.routeId == "work") {
+                this.setWorkPreviewItems();
+            }
+            else if(this.routeId.indexOf("work/") != -1) {
+                this.updateCurrentProjectId(this.routeId);
+            }
+            else if(this.routeId == "contact" || this.routeId == "about"){
+                this.fillExploreSection();
+            }
         }
     },
     
@@ -126,10 +148,15 @@ var ApplicationRouter = Backbone.Router.extend({
             cache: true,
             success: function(data){
                 router.loadedWorks = data.works.work;
-                console.log(router.loadedWorks);
+             
+                /* WHEN Work Information has been stored 
                 //check if on Work Page
                 //if so, will load items on page after work information has loaded
                 if(router.routeId == "work") router.setWorkPreviewItems();
+                //else if on case studies page then get current id of work
+                else if(router.routeId.indexOf("work/") != -1) router.updateCurrentProjectId(router.routeId);
+                else if(router.routeId == "contact" || router.routeId == "about") router.fillExploreSection();
+                */
                 NProgress.done();
                 $('.loading-screen').fadeOut(400);
             },
@@ -151,13 +178,13 @@ var ApplicationRouter = Backbone.Router.extend({
         }
     },
     
-	setActiveEntry: function(url) {
-		// Unmark all entries
-        $('.nav-link-active').removeClass('nav-link-active');
-
-		// Mark active entry
-		$(".nav-links li a[href='#/" + url + "']").parent().addClass('nav-link-active');
-	},
+    /*----------------------------------------------------------------------
+    * updateCurrentProjectId:
+    *---------------------------------------------------------------------*/
+    updateCurrentProjectId: function(id){
+        console.log('update to '+id);
+    },
+    
 
 /*
 	at: function() {
@@ -172,8 +199,20 @@ var ApplicationRouter = Backbone.Router.extend({
 
 	notFound: function() {
         NProgress.done();
+        $('.loading-screen').fadeOut(400);
 		this.addedView = new ContentView({template:"#404"});
 		this.switchView(this.addedView);
-	}
+	},
+    
+    
+    fillExploreSection: function(){
+        var i = Math.floor(Math.random() * (this.loadedWorks.length));
+        console.log(this.loadedWorks[i]);
+        console.log(i);
+        $('#workprev').attr('href', "#/work/"+this.loadedWorks[i].id);
+        $('#workprev').css('background', "url('"+this.loadedWorks[i].img+"') no-repeat");
+        $('#workprev').css('background-size', "100%");
+        $('#workprev').find('.work-desc').html(this.loadedWorks[i].description);
+    }
 
 });

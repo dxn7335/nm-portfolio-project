@@ -1,4 +1,6 @@
 @import url(header.css);
+@import url(loading.css);
+@import url(home.css);
 @import url(work.css);
 @import url(about.css);
 @import url(contact.css);
@@ -21,9 +23,9 @@ body{
 
 .content{
     opacity:0;
-	transition: all 0.45s ease;
-    -moz-transition: all 0.45s ease;
-    -webkit-transition: all 0.45s ease-in-out;
+	transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease-in-out;
     transform: translate3d(0, 50% 0);
     -webkit-transform: translate3d(0, 50%, 0);
     -moz-transform: translate3d(0, 50%, 0);
@@ -34,32 +36,10 @@ body{
 }
 
 .page-nonactive{
-    transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 150%, 0);
     opacity:0;
 }
 
-.loading-screen{
-    background: #fff;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-    z-index:5;
-}
-.loading-screen h2{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    font-size:300%;
-    font-weight:600;
-    padding:2%;
-    border:4px solid;
-}
 
 .overlay {
 	background: #000;
@@ -95,7 +75,7 @@ body{
 	background: rgb(42, 101, 152);
 }
 
-.bannertext{
+#banner .bannertext{
 	display: block;
     position: absolute;
     text-align: center;
@@ -109,7 +89,7 @@ body{
     width: 50%;
 }
 
-.bannertext h3{
+#banner .bannertext h3{
 	color:#fff;
 	margin-bottom: 7%;
 	font-size: 300%
@@ -135,28 +115,30 @@ body{
     padding: 8% 5%;
     min-height:150px;
     background: rgb(56, 137, 207);
+    background-size: 100%;
     /*will be replaced with background image?*/
     color:#fff;
     cursor:pointer;
-    transition: all 0.45s ease;
-    -moz-transition: all 0.45s ease;
-    -webkit-transition: all 0.45s ease-in-out;
-    -o-transition: all 0.45s ease-in-out;
+    transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
 }
 #workprev:hover{
-    background: -webkit-linear-gradient(90deg, #4C9BC4 10%, #21ECB9 90%);
-    background: -moz-linear-gradient(90deg, #4C9BC4 10%, #21ECB9 90%);
-    background: -o-linear-gradient(90deg, #4C9BC4 10%, #21ECB9 90%);
-    background: linear-gradient(90deg, #4C9BC4 10%, #21ECB9 90%);
+    background: -webkit-transform scale(1.5, 1.5);
+    background: -moz-transform: scale(1.5, 1.5);
+    background: -ms-transform: scale(1.5, 1.5);
+    background: -o-transform: scale(1.5, 1.5);
+    background: transform: scale(1.5, 1.5);
     background: #13B88F;
-    opacity:1;
+    text-decoration: none;
 }
 #workprev .header{
     color: #fff;
-    font-size: 90%;
+    font-size: 100%;
     font-weight: 400;
     display: block;
-    text-align: center;
+    text-align: center
 }
 #workprev .work-title{
     color: #fff;
@@ -172,22 +154,31 @@ body{
     -o-transition: all 0.45s ease-in-out;
 }
 #workprev .work-desc{
-    color: #fff;
-    opacity: 0.8;
+    color: #222;
     margin: auto;
-    margin-top:2%;
-    margin-bottom: 4%;
+    opacity: 0;
+    padding: 1.5% 1%;
+    margin-top: 7%;
+    margin-bottom: 2%;
     display: block;
     text-align: center;
     min-width: 300px;
-    max-width:500px;
-    font-weight: 300;
-    font-size:110%;
+    max-width: 500px;
+    font-weight: 600;
+    font-size:120%;
+    background: #fff;
+    transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
 }
-#workprev .border{
-    background:#fff;
+#workprev:hover .work-desc{
+    opacity: 1;
+    margin-top: 5%;
+    margin-bottom: 4%;
 }
 
+/* FOOTER */
 footer{
 	color:#888;
 	padding: 1% 0%;

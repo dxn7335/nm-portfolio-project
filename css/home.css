@@ -1,0 +1,64 @@
+.banner {
+	height:100%;
+	background: rgb(42, 101, 152);
+}
+
+.banner .bannertext{
+	display: block;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    min-width: 280px;
+    width: 45%;
+}
+
+.banner .bannertext h3{
+	color:#fff;
+	margin-bottom: 7%;
+	font-size: 250%;
+    background:rgba(0,0,0,0.6);
+    padding:2.5%;
+    font-family: "Lato";
+    font-weight: 600;
+}
+
+.banner .bannertext.initial h3{
+    background:none;
+}
+
+.banner .btn{
+	color:#fff;
+	border: 1px solid;
+	padding:2% 7%;
+    transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+.banner .btn:hover, .banner .btn:active{
+	background:#fff;
+	border: 1px solid #fff;
+    font-weight: 600;
+	color:#333;
+}
+
+
+/* Individual */
+#mcsaatchi{
+    background: url('http://pollenlondon.com/wp-content/uploads/2014/01/Untitled-1-1940x1142.jpg') no-repeat center;
+    background-size:100%;
+}
+
+#startrek{
+    background: url('http://payload239.cargocollective.com/1/1/51400/7092297/ST_Art05_960.jpg') no-repeat center;
+    background-size:100%;
+}
+
+#xmen{
+    background: url('http://payload249.cargocollective.com/1/1/51400/7288971/SentinelHistory_02_960.jpg') no-repeat center;
+    background-size:100%;
+}

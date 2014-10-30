@@ -1,10 +1,52 @@
 <div class='content' id='home'>
-   <!--banner-->
-   <div class="container" id="banner">
-    <!--<div id="yourimage"></div>
-    <div class="overlay"></div> -->
-      <div class="bannertext"><h3>User Interaction &amp; Experience Designer</h3>
-      <a class="btn" href="#work">View Work</a></div>  
-   </div>
-  </div>
+    <link rel="stylesheet" type="text/css" href="js/plugins/pagePiling/jquery.pagepiling.css" />
+    <div id="pagepiling">
+        <div class="section">
+            <!--banner-->
+           <div class="container banner" id="initial">
+            <!--<div id="yourimage"></div>
+            <div class="overlay"></div> -->
+              <div class="bannertext initial"><h3>User Interaction &amp; Experience Designer</h3>
+              <a class="btn" href="#work">View My Work</a></div>  
+           </div>
+        </div>
+        <div class="section">
+            <!--banner-->
+           <div class="container banner" id="mcsaatchi">
+            <!--<div id="yourimage"></div>
+            <div class="overlay"></div> -->
+              <div class="bannertext"><h3>Creating a Digital Presence for an Interactive Sports Agency</h3>
+              <a class="btn" href="#work/M&CSaatchi">View Project</a></div>  
+           </div>
+        </div>
+        <div class="section">
+            <!--banner-->
+           <div class="container banner" id="startrek">
+            <!--<div id="yourimage"></div>
+            <div class="overlay"></div> -->
+              <div class="bannertext"><h3>Animation Work for the Sequel to the Star Trek Movie Franchise</h3>
+              <a class="btn" href="#work/StarTrek">View Project</a></div>  
+           </div>
+        </div>
+        <div class="section">
+            <!--banner-->
+           <div class="container banner" id="xmen">
+            <!--<div id="yourimage"></div>
+            <div class="overlay"></div> -->
+              <div class="bannertext"><h3>Interactive Website Introducing Track Industries from the X-Men Series</h3>
+              <a class="btn" href="#work/Xmen">View Project</a></div>  
+           </div>
+        </div>
+    </div>
 </div>
+<script>$(document).ready(function() {
+    $('#pagepiling').pagepiling({
+        navigation: {
+            'textColor': '#FFF',
+            'bulletsColor': '#000',
+            'position': 'right',
+            'tooltips': ['Me', 'M&CSaatchi', 'Star Trek', 'X-Men']
+        },
+    });
+});
+</script>
