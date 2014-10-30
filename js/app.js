@@ -1,19 +1,5 @@
-window.onload = function(){
-
-	//initialize portfolio
-	var myApp = new portfolio_app('developer');
-	myApp.initialize();
-
-	//start router
-	myApp.initRouter();
-	//var router = new ApplicationRouter($('.body-wrap'), routeConfig);
-	//	Backbone.history.start();
-    
-
-}
-
 /* Main Portfolio App  ---------------------------------------------------------------------------------*/
-var portfolio_app = function(mode){
+var portfolio_app = function(){
 
 	var current_work_index;
 
@@ -27,15 +13,9 @@ var portfolio_app = function(mode){
 	}
     
     /**********************************************************************/
-	/*----------------------------------------------------------------------
-	// initRouter: instantiates and starts backbone router
-	/---------------------------------------------------------------------*/
+    // UI LISTENERS:
     /**********************************************************************/
-	function initRouter (){
-		this.router = new ApplicationRouter($('#body-container'), routeConfig);
-		Backbone.history.start();
-	}
-
+    
 	/*----------------------------------------------------------------------
 	// setScrollListeners: scroll event handlers
 	/---------------------------------------------------------------------*/
@@ -62,6 +42,7 @@ var portfolio_app = function(mode){
 
                 lastScroll = $(window).scrollTop();
             }
+            else { $('.body-main-header').removeClass('scrolled-down');}
 		}) 
 
 	}
@@ -82,6 +63,9 @@ var portfolio_app = function(mode){
 		});
 	}
 
+    /*----------------------------------------------------------------------
+	// setMobileMenuListeners: 
+	/---------------------------------------------------------------------*/
 	function setMobileMenuListener(){
 		$('.mobile-header-container .menu-btn').click(function(){
 			var toggle = $(this).data('toggle')||0
@@ -112,11 +96,22 @@ var portfolio_app = function(mode){
 
 	}
 
-
+    //RETURN////
 	return{
 		initialize: initialize,
-		initRouter: initRouter,
-        router: portfolio_app.router,
 	}
 
-};
+}; //End Portfolio App
+
+
+//On Window Finish Loading
+window.onload = function(){
+    
+	//initialize portfolio
+	var myPortfolio = new portfolio_app();
+	myPortfolio.initialize();
+
+	//start router
+    var AppRouter = new ApplicationRouter($('#body-container'), routeConfig);
+    Backbone.history.start();
+}

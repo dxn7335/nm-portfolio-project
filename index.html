@@ -2,13 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Test Portfolio</title>
     <!--CSS, Fonts-->
-    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'/>
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'/>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <link rel="stylesheet" type="text/css" href="css/nprogress.css" />
     <!--<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />-->
@@ -24,8 +25,8 @@
     <script type="text/javascript" src="js/router/routeConfig.js"></script>
     <!--plugins-->
     <script type="text/javascript" src="js/plugins/nprogress/nprogress.js"></script>
-    <script type="text/javascript" src="js/plugins/fullpage/jquery.fullPage.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/plugins/pagePiling/jquery.pagepiling.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
   </head>
   <body>
     <!-- HEADER -->
@@ -52,16 +53,27 @@
         </ul>
       </div>
     </header>
+      
     <!--BODY WRAPPER-->
+    <!--This is where the page content is loaded-->
     <div class="body-wrap">
-      <div id="body-container"></div>
+      <div id="body-container">
+      </div>
       <!--End content-->
     </div>
+      
     <!--Loading screen-->
     <div class='loading-screen'>
-        <h2>DN</h2>  
+        <figure id="loader-wrap">
+            <span class="loader">
+                <span class="loader-inner"></span>
+            </span>
+        </figure>
     </div>
+    <!--end loading-->
+  <!--End of Body-->    
   </body>
+    
   <script id="404" type="text/html">
     <div id="page-404" class="content 404">
         <div id="pg-404-text">

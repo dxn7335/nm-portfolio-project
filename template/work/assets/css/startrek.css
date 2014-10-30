@@ -1,0 +1,19 @@
+#banner{
+    background: rgb(54, 70, 84);
+    background: url('http://payload160.cargocollective.com/1/1/51400/5514822/StarTrek_Header01_o.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.bannertext{
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -70%);
+    -webkit-transform: translate(-50%, -70%);
+    -moz-transform: translate(-50%, -70%);
+    -o-transform: translate(-50%, -70%);
+}
+
+.bannertext h3{
+    font-weight:600;
+    font-size:250%;
+}

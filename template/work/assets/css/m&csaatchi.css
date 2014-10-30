@@ -1,0 +1,19 @@
+#banner{
+    background: rgb(54, 70, 84);
+    background: url('http://pollenlondon.com/wp-content/uploads/2014/01/MC-Saatchi-1940x1304.jpg') no-repeat;
+    background-size: cover;
+}
+
+.bannertext{
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -70%);
+    -webkit-transform: translate(-50%, -70%);
+    -moz-transform: translate(-50%, -70%);
+    -o-transform: translate(-50%, -70%);
+}
+
+.bannertext h3{
+    font-weight:600;
+    font-size:250%;
+}

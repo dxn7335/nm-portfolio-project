@@ -19,13 +19,6 @@ var WorkPrevView = Backbone.View.extend({
 	 * Get the template content and render it into a new div-element
 	 */
 	render: function() {
-        //configure view
-        /*var content = this.template;
-        var name = $(content).find('.name');
-        $(content).find('.name').html(this.model.name);
-        console.log($(content).find('.name').html(this.model.name)); */
-        console.log(this.template);
-        
         $('#work').find('#gallery').append(this.template);
 		return this;
 	}

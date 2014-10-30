@@ -1,15 +1,15 @@
 #about{
-	/*background-color: #3199c5;*/
-	background-color: #fff;
-	/*margin-top: -20px;*/
 	color:#fff;
 }
 
 #about #banner{
-    height: 50%;
+    background: rgb(54, 70, 84);
+    background: url('../assets/img/dawg.jpg') no-repeat center;
+    background-size: cover;
+    height: 60%;
 }
 
-#about .bannertext{
+#about #banner .bannertext{
     left: 50%;
     top: 70%;
     transform: translate(-50%, -70%);
@@ -17,11 +17,15 @@
     -moz-transform: translate(-50%, -70%);
     -o-transform: translate(-50%, -70%);
 }
-#about .bannertext h3{
+#about #banner .bannertext h3{
     color: #fff;
     margin-bottom: 7%;
     font-size: 210%;
     font-weight:600;
+    background: rgba(255,255,255,1);
+    color: #222;
+    display:inline-block;
+    padding: 3% 6%;
 }
 
 #about .container h4{
@@ -95,20 +99,9 @@
     -moz-transition: all 0.6s ease;
     -webkit-transition: all .6s ease-in-out;
 }
-#description:hover{
-    color: #fff;
-	background: url("../assets/img/dawg.jpg") center no-repeat;
-	background-size: cover;
-}
-#description:hover .overlay{
-    opacity:.75;
-}
 #description h4{
     font-size: 100%;
     font-weight: 400;
-}
-#description:hover h4{
-    color: #fff
 }
 #description .row{
 	width:75%;
@@ -125,14 +118,11 @@
 	min-width: 280px;
     font-size:75%;
 }
-#description:hover p{
-    color:#fff;
-}
 #description .border{
 }
-#description .overlay{
+#banner .overlay{
 	background: #111;
-    opacity:0;
+    opacity:0.4;
 }
 
 .row{

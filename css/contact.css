@@ -4,7 +4,7 @@
 #contact #banner{
     height: 50%;
 }
-#contact .bannertext{
+#contact #banner .bannertext{
     left: 50%;
     top: 70%;
     transform: translate(-50%, -70%);
@@ -12,11 +12,13 @@
     -moz-transform: translate(-50%, -70%);
     -o-transform: translate(-50%, -70%);
 }
-#contact .bannertext h3{
+#contact #banner .bannertext h3{
     color: #fff;
     margin-bottom: 7%;
     font-weight:600;
     font-size: 210%;
+    display:inline-block;
+    padding: 3% 6%;
 }
 #contact-info{
     background:#fff;
