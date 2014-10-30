@@ -1,0 +1,19 @@
+#banner{
+    background: rgb(54, 70, 84);
+    background: url('http://payload249.cargocollective.com/1/1/51400/7288971/TraskPortrait2_960.jpg') no-repeat;
+    background-size: cover;
+}
+
+.bannertext{
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -70%);
+    -webkit-transform: translate(-50%, -70%);
+    -moz-transform: translate(-50%, -70%);
+    -o-transform: translate(-50%, -70%);
+}
+
+.bannertext h3{
+    font-weight:600;
+    font-size:250%;
+}
