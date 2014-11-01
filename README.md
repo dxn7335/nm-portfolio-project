@@ -4,6 +4,7 @@ nm-portfolio-project
 New Media Career Skills - Portfolio
   
     
-Dependencies:
-BootStrap
-TimelineJS
+Dependencies:  
+- Backbone JS (Routing)
+- JQuery
+- Bootstrap
