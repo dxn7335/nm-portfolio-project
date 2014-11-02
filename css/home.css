@@ -1,6 +1,9 @@
 .banner {
 	height:100%;
 	background: rgb(42, 101, 152);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .banner .bannertext{
@@ -49,16 +52,13 @@
 
 /* Individual */
 #mcsaatchi{
-    background: url('http://pollenlondon.com/wp-content/uploads/2014/01/Untitled-1-1940x1142.jpg') no-repeat center;
-    background-size:100%;
+    background-image: url('http://pollenlondon.com/wp-content/uploads/2014/01/Untitled-1-1940x1142.jpg');
 }
 
 #startrek{
-    background: url('http://payload239.cargocollective.com/1/1/51400/7092297/ST_Art05_960.jpg') no-repeat center;
-    background-size:100%;
+    background-image: url('http://payload239.cargocollective.com/1/1/51400/7092297/ST_Art05_960.jpg');
 }
 
 #xmen{
-    background: url('http://payload249.cargocollective.com/1/1/51400/7288971/SentinelHistory_02_960.jpg') no-repeat center;
-    background-size:100%;
+    background-image: url('http://payload249.cargocollective.com/1/1/51400/7288971/SentinelHistory_02_960.jpg');
 }
