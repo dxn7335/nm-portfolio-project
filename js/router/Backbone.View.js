@@ -33,7 +33,7 @@ Backbone.View = Backbone.View.extend({
         view.$el.find('.content').addClass('page-nonactive');
         view.$el.one('transitionend', function () {
           if (_.isFunction(callback)) {
-            callback();
+              callback();
           }
         });
 

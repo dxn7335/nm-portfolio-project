@@ -237,7 +237,7 @@
     opacity: 1;
     margin-top:6%;
 }
-    .case-container.full{
+    .case-container.full, .case-container.text-wrap{
         width:100%;
         overflow: none;
     }
@@ -291,4 +291,19 @@
         left: 0;
         width: 100%;
         height: 100%;
+    }
+    
+    .case-container.text-wrap{
+        padding: 8% 5%;
+        background: #eee;
+    }
+    .case-container.text-wrap h3{
+        width: 55%;
+        display: block;
+        margin: auto;
+        font-size: 140%;
+    }
+    .case-container.text-wrap p{
+        font-size: 140%;
+        width: 60%;
     }
