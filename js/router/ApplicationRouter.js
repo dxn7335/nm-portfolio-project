@@ -40,8 +40,7 @@ var ApplicationRouter = Backbone.Router.extend({
 		view.render();
         this.afterViewLoaded();
 		this.currentView = view;
-        this.currentView.transitionIn();
-        $(window).scrollTop(0);
+        this.currentView.transitionIn($(window).scrollTop(0));
         $('.loading-screen').fadeOut(400);
         
 	},
