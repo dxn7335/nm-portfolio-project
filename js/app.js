@@ -9,6 +9,7 @@ var portfolio_app = function(){
 		//sets all needed components, listeners, etc
 		setScrollListeners();
 		//setSmoothScrolling();
+        setHeaderHoverListener();
 		setMobileMenuListener();
 	}
     
@@ -62,6 +63,16 @@ var portfolio_app = function(){
 		  
 		});
 	}
+    
+    function setHeaderHoverListener() {
+        $('.nav-links li a').mouseenter(function(){
+            $(this).parent().addClass('hover');
+        });
+        
+        $('.nav-links li a').on("mouseleave", function(){
+            $(this).parent().removeClass('hover');
+        });
+    }
 
     /*----------------------------------------------------------------------
 	// setMobileMenuListeners: 
