@@ -33,7 +33,7 @@
       text-decoration: none;
       color: #FFF;
       font-weight: 400;}
-    .body-main-header .nav-links li:hover {
+    .body-main-header .nav-links li.hover {
       background: rgb(92, 109, 124);
       color: #fff;}
     .body-main-header .nav-links li:hover > a {
