@@ -3,6 +3,7 @@
 
 #contact #banner{
     height: 50%;
+    background-size: cover;
 }
 #contact #banner .bannertext{
     left: 50%;

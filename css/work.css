@@ -1,5 +1,6 @@
 #work #banner{
     height: 50%;
+    background-size: cover;
 }
 
 #work #banner .bannertext{

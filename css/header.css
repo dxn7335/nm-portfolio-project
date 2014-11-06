@@ -50,7 +50,8 @@
 .body-main-header.scrolled {
   /*background: #fff;
   border-bottom: 1px solid #eee; */
-  background: #111;}
+  background: #111;
+padding-bottom:2%;}
   .body-main-header.scrolled .nav-links li {
     padding: 12px 20px;}
   .body-main-header.scrolled li > a {
@@ -72,6 +73,7 @@
 
 .mobile-header-container .menu-btn {
   float: right;
+    margin-top:4%;
   margin-right: 2%;
   font-size: 150%;
   text-decoration: none;
@@ -137,7 +139,6 @@
 .body-main-header.scrolled .nav-logo {
     padding-top: 12px; }
 
-
 #special {
   padding: 8px;
   margin-top: -16px;
@@ -146,6 +147,10 @@
   border: 1px solid;}
 #special:hover{
   border:none;
+}
+
+a#special{
+    margin-top: 2%;
 }
 
 /*Close Animation */
