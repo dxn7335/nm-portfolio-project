@@ -232,8 +232,8 @@
 /* CASE-CONTAINER STYLING *****************************************/
 .case-study .case-container{
     margin: auto;
-    margin-top: 6%;
-    margin-bottom: 2%;
+    margin-top: 5%;
+    margin-bottom: 4%;
     width: 75%;
     display: block;
     -webkit-transition: all 0.2s;
@@ -371,3 +371,62 @@
         color: #fff;
         text-decoration: none;
     }
+
+    
+    /* WORK NAVIGATION (on bottom screen) */
+    .work-nav{
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+    }
+        .work-nav .work-nav-btn{
+            color: #333;
+            font-weight: 600;
+            font-size: 140%;
+            display: inline-block;
+            padding: 1% 2%;
+            line-height: 40px;
+            height:100%;
+            -webkit-transition: all 0.2s;
+            -moz-transition: all 0.2s;
+            transition: all 0.2s;
+        }
+        .work-nav .work-nav-btn.prev{
+            float:left;
+            width: 45%;
+            padding-left: 3%;
+        }
+        .work-nav .work-nav-btn.next{
+            float: right;
+            width: 45%;
+            text-align: right;
+            padding-right: 3%;
+        }
+        .work-nav .work-nav-btn.gallery{
+            width: 10%;
+            text-align: center;
+            padding: 1.5% 2% 0.5%;
+            font-size: 105%;
+            color: #9B9B9B;
+        }
+            .work-nav .work-nav-btn.gallery:hover{
+                color:#333;
+                font-size:110%;
+                background: none;
+            }
+        .work-nav .work-nav-btn:hover{
+            background: #222;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 400;
+        }
+            .work-nav-btn.prev:hover, .work-nav-btn.next:hover{
+                padding: 1% 2%;
+            }
+        .work-nav .work-nav-btn.fill{
+            content: "&nbsp;";
+        }
+            .work-nav .work-nav-btn.fill:hover{
+                background:none;
+                padding: 0;
+            }

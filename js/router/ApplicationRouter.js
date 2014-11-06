@@ -182,45 +182,62 @@ var ApplicationRouter = Backbone.Router.extend({
     * updateCurrentProjectId:
     *---------------------------------------------------------------------*/
     updateCurrentProjectId: function(id){
+       id = id.split("work/")[1];
        for(var i=0; i<this.loadedWorks.length; i++){
-            if(id == this.loadedWorks[i]){ this.currentWork = i; }
+            if(id == this.loadedWorks[i].id){ this.currentWork = i; }
         }
     },
     
     /*----------------------------------------------------------------------
-    * updateCurrentProjectId:
+    * updateWorkNav: updates id of prev and next links on work nav
     *---------------------------------------------------------------------*/
     updateWorkNav: function(){
-        console.log("called");
+        var left, right, text;
+        var i = this.currentWork;
+        
+        //Setting up links
+        //PREV
+        if(i > 0){
+            text = "< P R E V";
+            left = "<a class='work-nav-btn prev' href='#/work/"+this.loadedWorks[i-1].id+"'>"+text+"</a>";
+        }
+        else{ left = "<a class='work-nav-btn prev fill'></a>"; }
+        
+        //NEXT
+        if(i < this.loadedWorks.length-1){
+            text = "N E X T >";
+            right = "<a class='work-nav-btn next' href='#/work/"+this.loadedWorks[i+1].id+"'>"+text+"</a>";
+        }
+        else{ right = "<a class='work-nav-btn next fill'></a>"; }
+        
+        //To Gallery button
+        var gallery = "<a class='work-nav-btn gallery' href='#/work'>"+"<i class='fa fa-th-list fa-2x'></i>"+"</a>";
+        
+        var nav = "<div class='work-nav'>"+left+gallery+right+"</div>";
+        $(nav).insertBefore('footer');
     },
     
-
-/*
-	at: function() {
-		this.switchView(this.atView);
-		this.setActiveEntry('#at');
-	},
-
-	duis: function() {
-		this.switchView(this.duisView);
-		this.setActiveEntry('#duis');
-	},*/
-
-	notFound: function() {
-        NProgress.done();
-        $(window).scrollTop(0);
-        $('.loading-screen').fadeOut(400);
-		this.addedView = new ContentView({template:"#404"});
-		this.switchView(this.addedView);
-	},
     
-    
+    /*----------------------------------------------------------------------
+    * fillExploreSection: fills content for bottom work prev link
+    *                     - for About, Contact pages
+    *---------------------------------------------------------------------*/
     fillExploreSection: function(){
         var i = Math.floor(Math.random() * (this.loadedWorks.length));
         $('#workprev').attr('href', "#/work/"+this.loadedWorks[i].id);
         $('#workprev').css('background', "url('"+this.loadedWorks[i].img+"') no-repeat");
         $('#workprev').css('background-size', "100%");
         $('#workprev').find('.work-desc').html(this.loadedWorks[i].description);
-    }
-
+    },
+    
+    /*-----------------------------------------------------------------------
+    * notFound: if page not found.
+    *----------------------------------------------------------------------*/
+    notFound: function() {
+        NProgress.done();
+        $(window).scrollTop(0);
+        $('.loading-screen').fadeOut(400);
+		this.addedView = new ContentView({template:"#404"});
+		this.switchView(this.addedView);
+	},
 });
