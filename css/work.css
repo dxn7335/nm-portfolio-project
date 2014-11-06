@@ -37,6 +37,7 @@
     padding: 6% 6%;
     border-bottom: 1px solid #BABABA;
     width: 100%;
+    max-width: 1400px;
     opacity: 0.45;
     -webkit-transition: all 0.35s ease-in-out;
     -moz-transition: all 0.35s ease-in-out;
@@ -252,7 +253,12 @@
     .case-container.half {
         width: 50%;
         display: inline-block;
+        float: left;
+        padding: 3% 0.5% 3% 5%;
     }
+        .case-container.half:nth-child(even){
+            padding:3% 5% 3% 0.5%;
+        }
     .case-container .text-center{
         text-align: center;
     }
@@ -261,7 +267,7 @@
         margin-bottom: 2%;
     }
     .case-container p{
-        font-size: 115%;
+        font-size: 135%;
         font-weight: 300;
         /* padding: 5%; */
         margin: auto;
@@ -282,8 +288,8 @@
         display:inline-block;
         clear:both;
         margin:auto;
-        margin-bottom: 4%;
-        margin-top: 4%;
+        margin-bottom: 3%;
+        margin-top: 3%;
         overflow: hidden;
         vertical-align: baseline;
     }

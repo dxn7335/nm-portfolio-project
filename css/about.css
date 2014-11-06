@@ -63,8 +63,8 @@
 
 #about #skills{
     padding: 5% 5%;
-	background-color: #F0F0F0;
-    color: #222;
+    background-color: #222;
+    color: #FFF;
 }
 #about #skills .icon-wrap{
 	width:80%;
@@ -73,27 +73,38 @@
     margin: auto;
     text-align: center;
     clear:both;
-    margin-top: 1%;
+    margin-top: 2%;
     margin-bottom: 6%;
 }
+    #about #skills img {
+        border: 1px solid #859DBE;
+        border-radius: 60px;
+        padding: 3%;
+        vertical-align: middle;
+        margin-bottom: 8%;
+    }
 #about #skills span{
-	font-size: 10pt;
-    margin: 0;
-    color: #939393;
+	font-size: 110%;
+    color: #ddd;
     display: block;
+    text-align: center;
+    width: 60%;
+    margin: auto;
 }
 #about #skills p{
     font-weight: 500;
     font-size: 130%
 }
 #about #skills .btn, #description .btn{
-	color: #222;
+	color: #333;
 	background: #fff;
-    border: 2px solid #222;
+    border: 3px solid #333;
+    border-radius: 0;
 	text-align: center;
 	margin: auto;
 	margin-top: 3.5%;
 	font-weight: 600;
+    font-size: 120%;
 	display: block;
 	width: 10%;
 	min-width: 125px;
