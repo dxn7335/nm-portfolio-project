@@ -24,6 +24,7 @@
     padding: 2% 0% 8%;
     background: #fff;
     width: 95%;
+    max-width: 1920px;
     min-width: 320px;
     display:block;
     margin:auto;
@@ -38,7 +39,6 @@
     padding: 6% 6%;
     border-bottom: 1px solid #BABABA;
     width: 100%;
-    max-width: 1400px;
     opacity: 0.45;
     -webkit-transition: all 0.35s ease-in-out;
     -moz-transition: all 0.35s ease-in-out;
@@ -293,6 +293,9 @@
         margin-top: 3%;
         overflow: hidden;
         vertical-align: baseline;
+    }
+    .case-container.full img{
+        width: 100%;
     }
     .case-container img.size-2{
         width: 50%;
