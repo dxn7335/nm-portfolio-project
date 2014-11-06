@@ -94,7 +94,7 @@ html, body {
 }
 #pp-nav li .active span,
 .pp-slidesNav .active span {
-    background: #333;
+    background: #fff;
 }
 #pp-nav span,
 .pp-slidesNav span {

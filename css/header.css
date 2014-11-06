@@ -34,7 +34,7 @@
       color: #FFF;
       font-weight: 400;}
     .body-main-header .nav-links li:hover {
-      background: rgb(76, 116, 187);
+      background: rgb(92, 109, 124);
       color: #fff;}
     .body-main-header .nav-links li:hover > a {
       color: #fff;}
@@ -131,7 +131,7 @@
 .nav-logo a{
   color: #FFFFFF;}
 .nav-logo a:hover, nav-logo:active {
-  color: #3199c5;
+  color: #222;
   background: #FFF; }
 
 .body-main-header.scrolled .nav-logo {
@@ -144,6 +144,9 @@
   font-weight: 600;
   text-decoration: none; 
   border: 1px solid;}
+#special:hover{
+  border:none;
+}
 
 /*Close Animation */
 @-webkit-keyframes close {

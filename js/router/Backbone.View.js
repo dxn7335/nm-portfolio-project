@@ -15,6 +15,7 @@ Backbone.View = Backbone.View.extend({
         var animateIn = function () {
           view.$el.find('.content').removeClass('page-nonactive');
           view.$el.find('.content').addClass('page-active');
+          $(window).scrollTop(0);
           view.$el.one('transitionend', function () {
             if (_.isFunction(callback)) {
               callback();
