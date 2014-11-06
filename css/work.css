@@ -293,6 +293,9 @@
         overflow: hidden;
         vertical-align: baseline;
     }
+    .case-container.full img{
+        width: 100%;
+    }
     .case-container img.size-2{
         width: 50%;
         height: auto;
