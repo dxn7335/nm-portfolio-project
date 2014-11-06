@@ -11,15 +11,6 @@
                 "type": "Web/Design"
             },
             {
-                "name": "The Last of Us",
-                "id": "lastofus",
-                "img": "http://www.thelastofus.playstation.com/img/media-2.jpg",
-                "thumbnail": "http://payload249.cargocollective.com/1/1/51400/7288975/TLOU_MainSite-Home_Devices2_960.jpg",
-                "description": "Designing the Website for an Intense Story-Driven Thriller Game. Rated 10/10 by IGN",
-                "breif": "Developed the main website for critically acclaimed action game, <i>The Last Of Us</i>, depicting its highly detailed imagery and intense story.",
-                "type": "Web/Design"
-            },
-            {
                 "name": "Star Trek: Into the Darkness",
                 "id": "StarTrek",
                 "img": "http://payload239.cargocollective.com/1/1/51400/7092297/ST_Art05_o.jpg",
@@ -36,6 +27,15 @@
                 "description": "Interactive Website Introducing Track Industries from the X-Men Series",
                 "breif": "Designed the website introducing Track Industries, a core component of the X-Men series, to promote the film, <i>X-Men: Days of Future's Past</i>.",
                 "type": "Web/Design/UI/UX"
+            },
+            {
+                "name": "The Last of Us",
+                "id": "lastofus",
+                "img": "http://www.thelastofus.playstation.com/img/media-2.jpg",
+                "thumbnail": "http://payload249.cargocollective.com/1/1/51400/7288975/TLOU_MainSite-Home_Devices2_960.jpg",
+                "description": "Designing the Website for an Intense Story-Driven Thriller Game. Rated 10/10 by IGN",
+                "breif": "Developed the main website for critically acclaimed action game, <i>The Last Of Us</i>, depicting its highly detailed imagery and intense story.",
+                "type": "Web/Design"
             }
         ]
     }

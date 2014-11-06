@@ -1,5 +1,4 @@
 #about{
-	color:#fff;
     font-family: "Lato";
 }
 
@@ -7,6 +6,7 @@
     /*background: url('../assets/img/dawg.jpg') no-repeat center;*/
     background-size: cover;
     height: 60%;
+    color:#fff;
 }
 
 #about #banner .bannertext{
@@ -29,7 +29,7 @@
 }
 
 #about .container{
-    padding: 7% 5% 7% 5%;
+    padding: 7% 6% 7% 6%;
 }
 
 #about .container h4{
@@ -43,11 +43,12 @@
     text-align:center;
     display: block;
     margin: auto;
-    font-size: 120%;
-    font-weight: 400;
+    font-size: 140%;
+    font-weight: 500;
     margin-top: 3%;
     margin-bottom: 3%;
     opacity: 0.75;
+    padding: 0% 3%;
 }
 
 .border{
@@ -63,8 +64,9 @@
 
 #about #skills{
     padding: 5% 5%;
-	background-color: #F0F0F0;
-    color: #222;
+    /*background-color: #222;
+    color: #FFF;*/
+    color: #333;
 }
 #about #skills .icon-wrap{
 	width:80%;
@@ -73,27 +75,38 @@
     margin: auto;
     text-align: center;
     clear:both;
-    margin-top: 1%;
+    margin-top: 2%;
     margin-bottom: 6%;
 }
+    #about #skills img {
+        border: 1px solid #859DBE;
+        border-radius: 60px;
+        padding: 3%;
+        vertical-align: middle;
+        margin-bottom: 8%;
+    }
 #about #skills span{
-	font-size: 10pt;
-    margin: 0;
-    color: #939393;
+	font-size: 110%;
+    color: #A0A0A0;
     display: block;
+    text-align: center;
+    width: 60%;
+    margin: auto;
 }
 #about #skills p{
     font-weight: 500;
-    font-size: 130%
+    font-size: 130%;
 }
 #about #skills .btn, #description .btn{
-	color: #222;
+	color: #333;
 	background: #fff;
-    border: 2px solid #222;
+    border: 3px solid #333;
+    border-radius: 0;
 	text-align: center;
 	margin: auto;
 	margin-top: 3.5%;
 	font-weight: 600;
+    font-size: 120%;
 	display: block;
 	width: 10%;
 	min-width: 125px;

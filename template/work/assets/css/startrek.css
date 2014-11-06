@@ -17,3 +17,12 @@
     font-weight:600;
     font-size:250%;
 }
+
+#left{
+    background: #191F2A;
+    color: #fff;
+}
+#right{
+    background: #232B3C;
+    color: #fff;
+}

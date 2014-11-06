@@ -17,3 +17,8 @@
     font-weight:600;
     font-size:250%;
 }
+
+.case-container.text-wrap{
+    background: #4E3D52;
+    color: #fff;
+}
