@@ -45,6 +45,25 @@ var portfolio_app = function(){
             }
             else { $('.body-main-header').removeClass('scrolled-down');}
 		}) 
+        
+        
+        $(window).scroll(function() {
+           $('.case-study .case-container').each( function() {
+               console.log('looked');
+                if( $(window).scrollTop() > $(this).offset().top - 350 ) {
+                    $(this).addClass('fadeInUp');
+                }
+           }); 
+        });
+        
+        $(window).scroll(function() {
+           $('.case-study .case-container img').each( function() {
+               console.log('looked');
+                if( $(window).scrollTop() > $(this).offset().top - 350 ) {
+                    $(this).addClass('fadeInUp');
+                }
+           }); 
+        });
 
 	}
     

@@ -36,7 +36,7 @@
     .body-main-header .nav-links li.hover {
       background: rgb(92, 109, 124);
       color: #fff;}
-    .body-main-header .nav-links li:hover > a {
+    .body-main-header .nav-links li>a:hover{
       color: #fff;}
     .body-main-header .nav-links li > a:active, .body-main-header .nav-links li .active {
       color: #ea103e; }
@@ -55,7 +55,7 @@
     padding: 12px 20px;}
   .body-main-header.scrolled li > a {
     color: #555; 
-    font-size: 95%;}
+    font-size: 110%;}
   .body-main-header.scrolled .menu-btn {
     color: #888; }
   .body-main-header.scrolled .nav-logo a{
