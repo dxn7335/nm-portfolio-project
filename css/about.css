@@ -1,10 +1,10 @@
 #about{
 	color:#fff;
+    font-family: "Lato";
 }
 
 #about #banner{
-    background: rgb(54, 70, 84);
-    background: url('../assets/img/dawg.jpg') no-repeat center;
+    /*background: url('../assets/img/dawg.jpg') no-repeat center;*/
     background-size: cover;
     height: 60%;
 }
@@ -22,18 +22,32 @@
     margin-bottom: 7%;
     font-size: 210%;
     font-weight:600;
-    background: rgba(255,255,255,1);
+    /*background: rgba(255,255,255,1);
     color: #222;
     display:inline-block;
-    padding: 3% 6%;
+    padding: 3% 6%;*/
+}
+
+#about .container{
+    padding: 7% 5% 7% 5%;
 }
 
 #about .container h4{
 	position: relative;
 	text-align: center;
-	padding-bottom: .25%;
 	font-family: 'open sans';
 	font-weight: 600;
+}
+
+#about .container p{
+    text-align:center;
+    display: block;
+    margin: auto;
+    font-size: 120%;
+    font-weight: 400;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    opacity: 0.75;
 }
 
 .border{
@@ -47,46 +61,54 @@
 	min-width: 40px;
 }
 
-#skills{
-	background-color: #F5F5F5;
-	background-color: #fff;
-	padding: 4% 5% 8% 5%;
+#about #skills{
+    padding: 5% 5%;
+	background-color: #F0F0F0;
+    color: #222;
 }
-#skills .row{
+#about #skills .icon-wrap{
 	width:80%;
+    min-width:300px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    clear:both;
+    margin-top: 1%;
+    margin-bottom: 6%;
 }
-#skills span{
+#about #skills span{
 	font-size: 10pt;
     margin: 0;
     color: #939393;
     display: block;
 }
-#skills .btn, #description .btn{
-	color: #fff;
-	border: 1px solid;
-	padding: .5% 1%;
+#about #skills p{
+    font-weight: 500;
+    font-size: 130%
+}
+#about #skills .btn, #description .btn{
+	color: #222;
+	background: #fff;
+    border: 2px solid #222;
 	text-align: center;
 	margin: auto;
 	margin-top: 3.5%;
-	font-weight: 300;
-	font-size: 60%;
+	font-weight: 600;
 	display: block;
 	width: 10%;
 	min-width: 125px;
 	z-index:1;
 	position: relative;
 }
-#skills .btn:hover, #skills .btn:active,
-#description .btn:hover, #description .btn:active{
-	color:#222;
-	border: 1px solid #222 #fff;
-	background:#fff;
+
+#about #skills .btn:hover, #about #skills .btn:active,
+#about #description .btn:hover, #about #description .btn:active{
+	color:#fff;
+	background: #222;
 }
 
-#description {
+#about #description {
     position: relative;
-	font-size: 160%;
-	padding: 9% 3% 9% 3%;
 	display: block;
 	margin: auto;
 	text-align: center;
@@ -94,43 +116,39 @@
 	font-family: 'open sans';
 	font-weight: 600;
 	color: #333;
-    background-color: #eee;
+    border-bottom: 1px solid #eee;
     transition: all 0.6s ease;
     -moz-transition: all 0.6s ease;
     -webkit-transition: all .6s ease-in-out;
 }
-#description h4{
-    font-size: 100%;
+#about #description h4{
+    font-size: 160%;
     font-weight: 400;
 }
-#description .row{
+    #description.withbg{
+        background: url('../assets/img/dawg.jpg');
+        background-size: 100%;
+    }
+#about #description .row{
 	width:75%;
 	z-index:1;
     display:block;
     margin:auto;
 }
-#description p{
-	font-weight: 300;
+#about #description p{
 	width: 90%;
-	padding: 2% 1% 0% 1%;
+	padding: 2% 0% 1%;
 	display: block;
 	margin: auto;
 	min-width: 280px;
-    font-size:75%;
 }
-#description .border{
-}
-#banner .overlay{
-	background: #111;
-    opacity:0.4;
+#about #description .overlay{
+	background: #eee;
+    opacity:0.95;
 }
 
 .row{
     display:block;
     margin:auto;
     text-align: center;
-}
-
-#skills h4{
-    color:rgb(42, 101, 152);
 }

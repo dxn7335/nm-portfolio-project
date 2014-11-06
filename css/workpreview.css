@@ -1,0 +1,69 @@
+/*Work Previews - at end of about and contact pages*/
+#workprev{
+    display:block;
+    position:relative;
+    padding: 8% 5%;
+    min-height:150px;
+    background: rgb(56, 137, 207);
+    background-size: 100%;
+    /*will be replaced with background image?*/
+    color:#fff;
+    cursor:pointer;
+    transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+}
+#workprev:hover{
+    background: -webkit-transform scale(1.5, 1.5);
+    background: -moz-transform: scale(1.5, 1.5);
+    background: -ms-transform: scale(1.5, 1.5);
+    background: -o-transform: scale(1.5, 1.5);
+    background: transform: scale(1.5, 1.5);
+    background: #13B88F;
+    text-decoration: none;
+}
+#workprev .header{
+    color: #fff;
+    font-size: 100%;
+    font-weight: 400;
+    display: block;
+    text-align: center
+}
+#workprev .work-title{
+    color: #fff;
+    font-size: 180%;
+    font-weight: 500;
+    display:block;
+    text-align: center;
+    margin-top:3%;
+    margin-bottom:2%;
+    transition: all 0.45s ease;
+    -moz-transition: all 0.45s ease;
+    -webkit-transition: all 0.45s ease-in-out;
+    -o-transition: all 0.45s ease-in-out;
+}
+#workprev .work-desc{
+    color: #222;
+    margin: auto;
+    opacity: 0;
+    padding: 1.5% 1%;
+    margin-top: 7%;
+    margin-bottom: 2%;
+    display: block;
+    text-align: center;
+    min-width: 300px;
+    max-width: 500px;
+    font-weight: 600;
+    font-size:120%;
+    background: #fff;
+    transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+}
+#workprev:hover .work-desc{
+    opacity: 1;
+    margin-top: 5%;
+    margin-bottom: 4%;
+}

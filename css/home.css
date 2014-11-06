@@ -18,6 +18,7 @@
     -o-transform: translate(-50%, -50%);
     min-width: 280px;
     width: 45%;
+    color:#fff;
 }
 
 .banner .bannertext h3{
@@ -51,6 +52,10 @@
 
 
 /* Individual */
+#initial{
+    background-image: url('http://mariusz.cc/images/background.jpg');
+}
+
 #mcsaatchi{
     background-image: url('http://pollenlondon.com/wp-content/uploads/2014/01/Untitled-1-1940x1142.jpg');
 }

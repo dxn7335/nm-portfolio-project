@@ -40,9 +40,10 @@ var ApplicationRouter = Backbone.Router.extend({
 		view.render();
         this.afterViewLoaded();
 		this.currentView = view;
-        this.currentView.transitionIn($(window).scrollTop(0));
+        //if on a work case study page, will call updateWorkNav 
+        var callback = (this.routeId.indexOf("work/") != -1) ? this.updateWorkNav() : null;
+        this.currentView.transitionIn(callback);
         $('.loading-screen').fadeOut(400);
-        
 	},
     
 	/*-----------------------------------------------------
@@ -84,8 +85,9 @@ var ApplicationRouter = Backbone.Router.extend({
      * Loads Page Content Through AJAX Request
      -----------------------------------------------------*/
     loadPageContent: function(id){
+        $('.loading-screen').fadeIn(300);
         NProgress.start();
-        $('.loading-screen').fadeIn(200);
+        
         // Make a reference to router itself
         // Fuck this. no like seriously, fuck this
         var router = this;
@@ -104,10 +106,7 @@ var ApplicationRouter = Backbone.Router.extend({
                 NProgress.done();
             },
             error: function(){ // [TODO] eeewwww this code is not DRY
-                router.addedView = new ContentView({template:"#404"});
-                router.switchView(router.addedView);
-                $('.loading-screen').fadeOut(400);
-                NProgress.done();
+                router.notFound();
             },
             progress: function(){
                 NProgress.inc();
@@ -172,6 +171,8 @@ var ApplicationRouter = Backbone.Router.extend({
     * setWorkPreview: 
     *---------------------------------------------------------------------*/
     setWorkPreviewItems: function(){
+        //On general work page
+        //Will load all prieviews and breif information
         for(var i=0; i<this.loadedWorks.length; i++){
             var item = new WorkPrevView({template: "#work-gallery-item", data: this.loadedWorks[i], routeId: "work-gallery-item"});
         }
@@ -181,7 +182,16 @@ var ApplicationRouter = Backbone.Router.extend({
     * updateCurrentProjectId:
     *---------------------------------------------------------------------*/
     updateCurrentProjectId: function(id){
-        console.log('update to '+id);
+       for(var i=0; i<this.loadedWorks.length; i++){
+            if(id == this.loadedWorks[i]){ this.currentWork = i; }
+        }
+    },
+    
+    /*----------------------------------------------------------------------
+    * updateCurrentProjectId:
+    *---------------------------------------------------------------------*/
+    updateWorkNav: function(){
+        console.log("called");
     },
     
 
@@ -198,6 +208,7 @@ var ApplicationRouter = Backbone.Router.extend({
 
 	notFound: function() {
         NProgress.done();
+        $(window).scrollTop(0);
         $('.loading-screen').fadeOut(400);
 		this.addedView = new ContentView({template:"#404"});
 		this.switchView(this.addedView);
@@ -206,8 +217,6 @@ var ApplicationRouter = Backbone.Router.extend({
     
     fillExploreSection: function(){
         var i = Math.floor(Math.random() * (this.loadedWorks.length));
-        console.log(this.loadedWorks[i]);
-        console.log(i);
         $('#workprev').attr('href', "#/work/"+this.loadedWorks[i].id);
         $('#workprev').css('background', "url('"+this.loadedWorks[i].img+"') no-repeat");
         $('#workprev').css('background-size', "100%");
