@@ -1,3 +1,15 @@
+/*----------------------------------------------------------------------*/
+/*
+*   Portfolio Template Project
+`   By, Danny Nguyen
+    ==============================
+
+    WorkPrevView:
+        Acts like TemplateVIew, but loads in external template for
+        work preview through ajax before filling and appending
+*/
+/*----------------------------------------------------------------------*/
+
 var WorkPrevView = Backbone.View.extend({
     model: null,
     

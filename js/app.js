@@ -1,4 +1,18 @@
-/* Main Portfolio App  ---------------------------------------------------------------------------------*/
+/////////////////////////////////////////////////////////////////////////
+/*
+*   Portfolio Template Project
+`   By, Danny Nguyen
+    ==============================
+
+    THe main script that initializes the portfolio application.
+    
+    - Will startup main event listeners for general elements on DOM
+    - Start Backbone Router
+    
+*/
+/////////////////////////////////////////////////////////////////////////
+
+/* Main Portfolio App */
 var portfolio_app = function(){
 
 	var current_work_index;
@@ -47,19 +61,25 @@ var portfolio_app = function(){
 		}) 
         
         
+        // Content on case-studies will fade in when scrolling towards it
+        //distance away from content used to detect when content should fade in
+        var dist = screen.height / 1.75;
+        
+        //For the main case-container class
         $(window).scroll(function() {
            $('.case-study .case-container').each( function() {
-               console.log('looked');
-                if( $(window).scrollTop() > $(this).offset().top - 350 ) {
+            
+                if( $(window).scrollTop() > $(this).offset().top - dist ) {
                     $(this).addClass('fadeInUp');
                 }
            }); 
         });
         
+        //For images in case-container
         $(window).scroll(function() {
            $('.case-study .case-container img').each( function() {
-               console.log('looked');
-                if( $(window).scrollTop() > $(this).offset().top - 350 ) {
+
+                if( $(window).scrollTop() > $(this).offset().top - dist) {
                     $(this).addClass('fadeInUp');
                 }
            }); 
@@ -134,7 +154,7 @@ var portfolio_app = function(){
 }; //End Portfolio App
 
 
-//On Window Finish Loading
+// On Window Finish Loading //
 window.onload = function(){
     
 	//initialize portfolio
@@ -142,6 +162,6 @@ window.onload = function(){
 	myPortfolio.initialize();
 
 	//start router
-    var AppRouter = new ApplicationRouter($('#body-container'), routeConfig);
+    var AppRouter = new ApplicationRouter($('#body-container'));
     Backbone.history.start();
 }

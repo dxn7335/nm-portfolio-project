@@ -1,3 +1,16 @@
+/*-------------------------------------------------------------------------*/
+/*
+*   Portfolio Template Project
+`   By, Danny Nguyen
+    ==============================
+
+    TemplatedView:
+        Holds a javascript template. (Used for work's gallery item)
+        When created, a data source holding information will
+        be used to fill the template before appending to DOM Element
+*/
+/*-------------------------------------------------------------------------*/
+
 var TemplatedView = Backbone.View.extend({
 
 	/*
