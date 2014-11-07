@@ -1,3 +1,16 @@
+/*---------------------------------------------------------------*/
+/*
+*   Portfolio Template Project
+`   By, Danny Nguyen
+    ==============================
+
+    Application Router:
+        The Backbone router that tracks the url manipulation
+        and loads page content based on history change
+*/
+/*---------------------------------------------------------------*/
+
+
 var ApplicationRouter = Backbone.Router.extend({
 	
 	initialize: function(el, pRoutes) {

@@ -1,3 +1,15 @@
+/*----------------------------------------------------------------------*/
+/*
+*   Portfolio Template Project
+`   By, Danny Nguyen
+    ==============================
+
+    Backbone View:
+        The backbone view overrided and used to hold the page content 
+        that gets loaded in. When loaded, will go thorugh a transition
+*/
+/*----------------------------------------------------------------------*/
+
 // Override View.remove()'s default behavior
 Backbone.View = Backbone.View.extend({
 

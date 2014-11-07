@@ -1,3 +1,13 @@
+/*---------------------------------------------------------------*/
+/*
+*   Portfolio Template Project
+`   By, Danny Nguyen
+    ==============================
+
+    Content View:
+        General view loaded in, similar to Backbone View
+*/
+/*---------------------------------------------------------------*/
 var ContentView = Backbone.View.extend({
 
 	/*
