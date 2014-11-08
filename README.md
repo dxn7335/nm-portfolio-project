@@ -5,7 +5,8 @@ New Media Career Skills - Portfolio
   
     
 Dependencies:  
-- Backbone JS (Routing)
+- Backbone.JS (For Routing)
+- Underscore.JS
 - JQuery
 - Bootstrap  
   
